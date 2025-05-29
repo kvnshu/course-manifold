@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://bulletin.engin.umich.edu/courses/clasp/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+  
+  
+  <style type="text/css">@font-face {font-family:Roboto;font-style:normal;font-weight:700;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/700/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:700;src:url(/cf-fonts/s/roboto/5.0.11/greek/700/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:700;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/700/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:700;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:700;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:700;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:700;src:url(/cf-fonts/s/roboto/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style>
+	<style type="text/css">@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/italic.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/italic.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:italic;font-weight:300;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}</style>
+	<style type="text/css">@font-face {font-family:Pathway Gothic One;font-style:normal;font-weight:400;src:url(/cf-fonts/s/pathway-gothic-one/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Pathway Gothic One;font-style:normal;font-weight:400;src:url(/cf-fonts/s/pathway-gothic-one/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+	<style type="text/css">@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/300/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/latin/300/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/300/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/300/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/300/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/400/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/400/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin/400/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/400/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/400/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/700/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/700/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin/700/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/700/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/700/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/700/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}</style>
+	<style type="text/css">@font-face {font-family:Montserrat;font-style:normal;font-weight:200;src:url(/cf-fonts/s/montserrat/5.0.16/latin/200/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:200;src:url(/cf-fonts/s/montserrat/5.0.16/latin-ext/200/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:200;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic/200/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:200;src:url(/cf-fonts/s/montserrat/5.0.16/vietnamese/200/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:200;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic-ext/200/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/vietnamese/400/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic-ext/400/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/latin/400/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic/400/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/latin-ext/400/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic/700/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/vietnamese/700/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/latin-ext/700/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic-ext/700/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/latin/700/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic/700/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}</style>
+  <link href="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/css" rel="stylesheet">
+
+	<title>Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin</title>
+<meta name="robots" content="max-image-preview:large">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://stats.wp.com/">
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="preconnect" href="https://i0.wp.com/">
+<link rel="alternate" type="application/rss+xml" title="Bulletin » Feed" href="https://bulletin.engin.umich.edu/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bulletin.engin.umich.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel="stylesheet" id="genesis-blocks-style-css-css" href="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/style-blocks.build.css" type="text/css" media="all">
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/mediaelementplayer-legacy.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/wp-mediaelement.min.css" type="text/css" media="all">
+<style id="jetpack-sharing-buttons-style-inline-css" type="text/css">
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--um-blue: #00274c;--wp--preset--color--um-maize: #ffcb05;--wp--preset--color--arb-blue: #2f65a7;--wp--preset--color--tappan-red: #9a3324;--wp--preset--color--amethyst: #702082;--wp--preset--color--matthaei-violet: #575294;--wp--preset--color--puma-black: #131516;--wp--preset--color--dc-mist: #ebeaea;--wp--preset--color--ross-orange: #d86018;--wp--preset--color--taubman-teal: #00B2A9;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="understrap-styles-css" href="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/theme.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/js" id="google_gtagjs-js" async=""></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["bulletin.engin.umich.edu"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-201222432-1", {"anonymize_ip":true});
+gtag("config", "G-CFP1EXG522");
+/* ]]> */
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://bulletin.engin.umich.edu/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://bulletin.engin.umich.edu/wp-json/wp/v2/pages/201"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bulletin.engin.umich.edu/xmlrpc.php?rsd">
+<link rel="canonical" href="https://bulletin.engin.umich.edu/courses/clasp/">
+<link rel="shortlink" href="https://wp.me/P91bh1-3f">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://bulletin.engin.umich.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbulletin.engin.umich.edu%2Fcourses%2Fclasp%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://bulletin.engin.umich.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbulletin.engin.umich.edu%2Fcourses%2Fclasp%2F&amp;format=xml">
+<meta name="generator" content="Site Kit by Google 1.109.0">	<style>img#wpstats{display:none}</style>
+		<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bulletin - Home of the Michigan Engineering Bulletin">
+		<style type="text/css" id="wp-custom-css">
+			table.unique-class-here tr {
+	background: none !important;
+}
+
+
+table.unique-class-here td {
+	border: none !important;
+}
+
+#combined.three-col #content {
+	margin-left: -35px !important;
+}
+
+#right-sidebar {
+	margin-left: 65px !important;
+}
+
+#combined.three-col.no-nav,
+#combined.two-col.no-nav {
+	margin: 0 auto;
+	padding-top: 1px;
+	float: none;
+}
+
+.breadcrumbs-content {
+	display: none;
+}
+
+.post-date {
+	display: none;
+}
+.cushion{
+	padding:0 2rem;
+  border-left:5px solid #ffcb05;
+  border-radius:15px 0 0 15px;}
+
+/* quick fix to the upper subnav still showing on full-width page templates on tablet/mobile */
+
+body.page-template-fullwidthpage .subnav {
+	display:none;
+}
+
+/* fix for last menu dropdown going off screen */
+
+.navbar .container ul#main-menu li.menu-item:last-of-type ul {
+	right: -4rem;
+}
+
+.page-id-7025 .entry-title{ display:none; }
+
+
+.page-id-27 .entry-title{ display:none; }		</style>
+		<style>@font-face { font-family: "one sec Inter"; src: url("chrome-extension://femnahohginddofgekknfmaklcbpinkn/fonts/Inter-Regular.ttf") format("truetype"); font-weight: 400; }@font-face { font-family: "one sec Inter"; src: url("chrome-extension://femnahohginddofgekknfmaklcbpinkn/fonts/Inter-Medium.ttf") format("truetype"); font-weight: 500; }@font-face { font-family: "one sec Inter"; src: url("chrome-extension://femnahohginddofgekknfmaklcbpinkn/fonts/Inter-SemiBold.ttf") format("truetype"); font-weight: 600; }@font-face { font-family: "one sec Inter"; src: url("chrome-extension://femnahohginddofgekknfmaklcbpinkn/fonts/Inter-Bold.ttf") format("truetype"); font-weight: 700; }@font-face { font-family: "one sec Open Runde"; src: url("chrome-extension://femnahohginddofgekknfmaklcbpinkn/fonts/OpenRunde-Bold.woff2") format("woff2"), url("chrome-extension://femnahohginddofgekknfmaklcbpinkn/fonts/OpenRunde-Bold.woff") format("woff"); font-weight: 700; }</style><script id="simplify-jobs-page-script" src="chrome-extension://pbanhockgagggenencehbnadejlgchfc/js/pageScript.bundle.js"></script></head><one-sec-shadow-host><template shadowrootmode="closed"><div><link rel="stylesheet" href="chrome-extension://femnahohginddofgekknfmaklcbpinkn/base.css" type="text/css" crossorigin="anonymous"></div></template></one-sec-shadow-host>
+
+<body class="page-template-default page page-id-201 page-child parent-pageid-186 wp-custom-logo wp-embed-responsive vsc-initialized">
+<div class="site" id="page">
+
+	<!-- ******************* The Navbar Area ******************* -->
+	<header id="wrapper-navbar" itemscope="" itemtype="http://schema.org/WebSite">
+
+		<a class="skip-link sr-only sr-only-focusable" href="https://bulletin.engin.umich.edu/courses/clasp/#content">Skip to content</a>
+
+		<!-- Your site title as branding in the menu -->
+		<div id="site-branding" class="row align-items-center bg-primary px-5">
+			<div id="site-logo" class="col-md pt-3 pb-4">
+			<a href="https://bulletin.engin.umich.edu/" class="navbar-brand custom-logo-link" rel="home"><img width="857" height="144" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/Bulletin.png" class="img-fluid" alt="University of Michigan Engineering Bulletin" decoding="async" fetchpriority="high" srcset="https://i0.wp.com/bulletin.engin.umich.edu/wp-content/uploads/sites/306/2021/07/Bulletin.png?w=857&amp;ssl=1 857w, https://i0.wp.com/bulletin.engin.umich.edu/wp-content/uploads/sites/306/2021/07/Bulletin.png?resize=300%2C50&amp;ssl=1 300w, https://i0.wp.com/bulletin.engin.umich.edu/wp-content/uploads/sites/306/2021/07/Bulletin.png?resize=768%2C129&amp;ssl=1 768w" sizes="(max-width: 857px) 100vw, 857px" data-attachment-id="4012" data-permalink="https://bulletin.engin.umich.edu/bulletin/" data-orig-file="https://i0.wp.com/bulletin.engin.umich.edu/wp-content/uploads/sites/306/2021/07/Bulletin.png?fit=857%2C144&amp;ssl=1" data-orig-size="857,144" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Bulletin" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/bulletin.engin.umich.edu/wp-content/uploads/sites/306/2021/07/Bulletin.png?fit=300%2C50&amp;ssl=1" data-large-file="https://i0.wp.com/bulletin.engin.umich.edu/wp-content/uploads/sites/306/2021/07/Bulletin.png?fit=640%2C108&amp;ssl=1"></a><!-- end custom logo -->
+			</div><!-- #site-logo -->
+			<div id="search-form" class="col-md-auto py-2">
+				
+<form method="get" id="searchform" action="https://bulletin.engin.umich.edu/" role="search">
+	<label class="sr-only" for="q">Search</label>
+	<div class="input-group">
+		<input type="hidden" name="s" id="s"><!-- 's' is to get the WP search page. 'q' is to hold the G-CSE search query. -->
+		<input class="field form-control" id="q" name="q" type="text" placeholder="Search" value="">
+		<span class="hide input-group-append">
+			<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
+		</span>
+	</div>
+</form>
+			</div><!-- #search -->
+		</div><!-- #site-branding -->
+
+		<nav class="navbar navbar-expand-md navbar-dark">
+
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+									<div class="container">
+								<!-- The WordPress Menu goes here -->
+				<div id="navbarNavDropdown" class="collapse navbar-collapse"><ul id="main-menu" class="navbar-nav mx-auto align-items-start"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-6720 nav-item"><a title="About" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6720">About</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6720">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6717 nav-item"><a title="About the College" href="https://bulletin.engin.umich.edu/info/" class="dropdown-item">About the College</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6718 nav-item"><a title="About the Bulletin" href="https://bulletin.engin.umich.edu/aboutthebulletin/" class="dropdown-item">About the Bulletin</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6849 nav-item"><a title="Contacts" href="https://bulletin.engin.umich.edu/info/umich/" class="dropdown-item">Contacts</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6722 nav-item"><a title="Leadership" href="https://bulletin.engin.umich.edu/university-of-michigan-regents-and-university-of-michigan-college-of-engineering-administration/" class="dropdown-item">Leadership</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724 nav-item"><a title="Archived" href="https://bulletin.engin.umich.edu/info/archive/" class="dropdown-item">Archived</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-6725 nav-item"><a title="Calendars and Deadlines" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6725">Calendars and Deadlines</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6725">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6882 nav-item"><a title="Academic Calendar" href="https://bulletin.engin.umich.edu/academic-calendar-and-deadlines/academic-calendar/" class="dropdown-item">Academic Calendar</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6727 nav-item"><a title="Deadlines" href="https://bulletin.engin.umich.edu/academic-calendar-and-deadlines/undergraduate-deadlines/" class="dropdown-item">Deadlines</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-6730 nav-item"><a title="Departments &amp; Programs Overview" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6730">Departments &amp; Programs Overview</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6730">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6731 nav-item"><a title="Aerospace Engineering (AEROSP)" href="https://bulletin.engin.umich.edu/aero/" class="dropdown-item">Aerospace Engineering (AEROSP)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6732 nav-item"><a title="Applied Physics (APPPHYS)" href="https://bulletin.engin.umich.edu/appl-phys/" class="dropdown-item">Applied Physics (APPPHYS)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6733 nav-item"><a title="Biomedical Engineering (BIOMEDE)" href="https://bulletin.engin.umich.edu/bme/" class="dropdown-item">Biomedical Engineering (BIOMEDE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6734 nav-item"><a title="Chemical Engineering (CHE)" href="https://bulletin.engin.umich.edu/che/" class="dropdown-item">Chemical Engineering (CHE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6735 nav-item"><a title="Civil and Environmental Engineering (CEE)" href="https://bulletin.engin.umich.edu/cee/" class="dropdown-item">Civil and Environmental Engineering (CEE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6736 nav-item"><a title="Climate and Space Sciences and Engineering (CLaSP)" href="https://bulletin.engin.umich.edu/clasp/" class="dropdown-item">Climate and Space Sciences and Engineering (CLaSP)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-8623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8623 nav-item"><a title="Design Science (DESCI)" href="https://bulletin.engin.umich.edu/design-science/" class="dropdown-item">Design Science (DESCI)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6737 nav-item"><a title="Electrical Engineering and Computer Science (EECS)" href="https://bulletin.engin.umich.edu/eecs/" class="dropdown-item">Electrical Engineering and Computer Science (EECS)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6884 nav-item"><a title="Engineering Education Research (EER)" href="https://bulletin.engin.umich.edu/engineering-education-research-3/" class="dropdown-item">Engineering Education Research (EER)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6739 nav-item"><a title="Engineering Physics" href="https://bulletin.engin.umich.edu/engin-phys/" class="dropdown-item">Engineering Physics</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-7062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7062 nav-item"><a title="Entrepreneurship (ENTR)" href="https://bulletin.engin.umich.edu/__entre/" class="dropdown-item">Entrepreneurship (ENTR)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6741 nav-item"><a title="Industrial and Operations Engineering (IOE)" href="https://bulletin.engin.umich.edu/depts/ioe-2/" class="dropdown-item">Industrial and Operations Engineering (IOE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6743 nav-item"><a title="Integrative Systems &amp; Design Graduate Degrees" href="https://bulletin.engin.umich.edu/depts/integrative-systems-design-isd/" class="dropdown-item">Integrative Systems &amp; Design Graduate Degrees</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6745 nav-item"><a title="Macromolecular Science and Engineering (MACROMOL)" href="https://bulletin.engin.umich.edu/depts/macro-se-2/" class="dropdown-item">Macromolecular Science and Engineering (MACROMOL)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6747 nav-item"><a title="Materials Science and Engineering (MSE)" href="https://bulletin.engin.umich.edu/depts/mse-2/" class="dropdown-item">Materials Science and Engineering (MSE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6749 nav-item"><a title="Mechanical Engineering (ME)" href="https://bulletin.engin.umich.edu/depts/me-2/" class="dropdown-item">Mechanical Engineering (ME)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6753 nav-item"><a title="Naval Architecture and Marine Engineering (NAME)" href="https://bulletin.engin.umich.edu/depts/name/" class="dropdown-item">Naval Architecture and Marine Engineering (NAME)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6751 nav-item"><a title="Nuclear Engineering and Radiological Sciences (NERS)" href="https://bulletin.engin.umich.edu/depts/ners/" class="dropdown-item">Nuclear Engineering and Radiological Sciences (NERS)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6752 nav-item"><a title="Robotics (ROB)" href="https://bulletin.engin.umich.edu/depts/rob/" class="dropdown-item">Robotics (ROB)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6754 nav-item"><a title="Transportation Research Institute (UMTRI)" href="https://www.umtri.umich.edu/" class="dropdown-item">Transportation Research Institute (UMTRI)</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6755" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children dropdown active menu-item-6755 nav-item"><a title="Course Guides" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6755">Course Guides</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6755">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6756 nav-item"><a title="Aerospace Engineering Courses (AEROSP)" href="https://bulletin.engin.umich.edu/courses/aero/" class="dropdown-item">Aerospace Engineering Courses (AEROSP)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6758 nav-item"><a title="Applied Physics Courses (APPPHYS)" href="https://bulletin.engin.umich.edu/courses/appl-phys/" class="dropdown-item">Applied Physics Courses (APPPHYS)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6759 nav-item"><a title="Biomedical Engineering Courses (BIOMEDE)" href="https://bulletin.engin.umich.edu/courses/bme/" class="dropdown-item">Biomedical Engineering Courses (BIOMEDE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6760 nav-item"><a title="Chemical Engineering Courses (CHE + ESENG)" href="https://bulletin.engin.umich.edu/courses/che/" class="dropdown-item">Chemical Engineering Courses (CHE + ESENG)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6761 nav-item"><a title="Civil and Environmental Engineering Courses (CEE)" href="https://bulletin.engin.umich.edu/courses/cee/" class="dropdown-item">Civil and Environmental Engineering Courses (CEE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6762" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-201 current_page_item active menu-item-6762 nav-item"><a title="Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE)" href="https://bulletin.engin.umich.edu/courses/clasp/" class="dropdown-item">Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624 nav-item"><a title="Design Science Courses (DESCI)" href="https://bulletin.engin.umich.edu/design-science-courses-desci/" class="dropdown-item">Design Science Courses (DESCI)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6764 nav-item"><a title="Electrical Engineering and Computer Science Courses (EECS)" href="https://bulletin.engin.umich.edu/courses/eecs/" class="dropdown-item">Electrical Engineering and Computer Science Courses (EECS)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6765" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6765 nav-item"><a title="Engineering Division Courses (ENGR)" href="https://bulletin.engin.umich.edu/courses/engr/" class="dropdown-item">Engineering Division Courses (ENGR)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6766 nav-item"><a title="Engineering Education Research Courses (EER)" href="https://bulletin.engin.umich.edu/courses/eer/" class="dropdown-item">Engineering Education Research Courses (EER)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6767 nav-item"><a title="Entrepreneurship Courses (ENTR)" href="https://bulletin.engin.umich.edu/courses/entr/" class="dropdown-item">Entrepreneurship Courses (ENTR)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6768 nav-item"><a title="Industrial and Operations Engineering Courses (IOE)" href="https://bulletin.engin.umich.edu/courses/ioe/" class="dropdown-item">Industrial and Operations Engineering Courses (IOE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6770 nav-item"><a title="Macromolecular Science and Engineering Courses (MACROMOL)" href="https://bulletin.engin.umich.edu/courses/macro-se/" class="dropdown-item">Macromolecular Science and Engineering Courses (MACROMOL)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6771 nav-item"><a title="Materials Science and Engineering Courses (MATSCIE)" href="https://bulletin.engin.umich.edu/courses/matscie/" class="dropdown-item">Materials Science and Engineering Courses (MATSCIE)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6772 nav-item"><a title="Mechanical Engineering Courses (MECHENG, AUTO, &amp; MFG)" href="https://bulletin.engin.umich.edu/courses/me/" class="dropdown-item">Mechanical Engineering Courses (MECHENG, AUTO, &amp; MFG)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6773 nav-item"><a title="Military Officer Education Program (AERO, MILSCI, &amp; NAVSCI)" href="https://bulletin.engin.umich.edu/courses/moep/" class="dropdown-item">Military Officer Education Program (AERO, MILSCI, &amp; NAVSCI)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6780 nav-item"><a title="Naval Architecture and Marine Engineering Courses (NAME)" href="https://bulletin.engin.umich.edu/courses/name/" class="dropdown-item">Naval Architecture and Marine Engineering Courses (NAME)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6777" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6777 nav-item"><a title="Nuclear Engineering and Radiological Sciences Courses (NERS)" href="https://bulletin.engin.umich.edu/courses/ners/" class="dropdown-item">Nuclear Engineering and Radiological Sciences Courses (NERS)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6778" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6778 nav-item"><a title="Robotics Courses (ROB)" href="https://bulletin.engin.umich.edu/courses/robotics-courses/" class="dropdown-item">Robotics Courses (ROB)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6781 nav-item"><a title="Technical Communications Courses (TCHNCLCM)" href="https://bulletin.engin.umich.edu/courses/techcomm/" class="dropdown-item">Technical Communications Courses (TCHNCLCM)</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6782" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6782 nav-item"><a title="UARTS Courses (UARTS)" href="https://bulletin.engin.umich.edu/courses/uarts-courses/" class="dropdown-item">UARTS Courses (UARTS)</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6785" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-6785 nav-item"><a title="Academic Rules" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6785">Academic Rules</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6785">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6783 nav-item"><a title="Academic Definitions" href="https://bulletin.engin.umich.edu/rules/academic-definitions/" class="dropdown-item">Academic Definitions</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6788" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6788 nav-item"><a title="Registration" href="https://bulletin.engin.umich.edu/rules/registration-2/" class="dropdown-item">Registration</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6790 nav-item"><a title="Declare/Change Major" href="https://bulletin.engin.umich.edu/rules/declare-change-major/" class="dropdown-item">Declare/Change Major</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6885 nav-item"><a title="Transferring Out, Withdrawals, Readmission" href="https://bulletin.engin.umich.edu/rules/transfer/" class="dropdown-item">Transferring Out, Withdrawals, Readmission</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6792 nav-item"><a title="Student Conduct" href="https://bulletin.engin.umich.edu/rules/" class="dropdown-item">Student Conduct</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6789 nav-item"><a title="Grades and Scholastic Standing" href="https://bulletin.engin.umich.edu/rules/standing/" class="dropdown-item">Grades and Scholastic Standing</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6807 nav-item"><a title="Degree Requirements" href="https://bulletin.engin.umich.edu/rules/graduation/" class="dropdown-item">Degree Requirements</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6794 nav-item"><a title="Fees &amp; Debt" href="https://bulletin.engin.umich.edu/rules/fees/" class="dropdown-item">Fees &amp; Debt</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6795" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6795 nav-item"><a title="Transfer Credit" href="https://bulletin.engin.umich.edu/rules/transfer-credit/" class="dropdown-item">Transfer Credit</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-6798 nav-item"><a title="Admissions" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6798">Admissions</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6798">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6800 nav-item"><a title="Admissions" href="https://bulletin.engin.umich.edu/admissions-3/" class="dropdown-item">Admissions</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6801 nav-item"><a title="Accepted Credit" href="https://bulletin.engin.umich.edu/admissions-3/accepted-credit/" class="dropdown-item">Accepted Credit</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-8180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8180 nav-item"><a title="Cross-Campus Transfer" href="https://bulletin.engin.umich.edu/admissions-3/cross-campus-transfer/" class="dropdown-item">Cross-Campus Transfer</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6804" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6804 nav-item"><a title="Second Bachelor’s Degree" href="https://bulletin.engin.umich.edu/admissions-3/second-bachelors/" class="dropdown-item">Second Bachelor’s Degree</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6803" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6803 nav-item"><a title="Special Student Status" href="https://bulletin.engin.umich.edu/admissions-3/noncandidate/" class="dropdown-item">Special Student Status</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6802 nav-item"><a title="Readmission" href="https://bulletin.engin.umich.edu/admissions-3/readmission/" class="dropdown-item">Readmission</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-6805 nav-item"><a title="Undergraduate Education" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6805">Undergraduate Education</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6805">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6806" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6806 nav-item"><a title="Undergraduate Education" href="https://bulletin.engin.umich.edu/ug-ed/" class="dropdown-item">Undergraduate Education</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6887 nav-item"><a title="College-Wide Offerings" href="https://bulletin.engin.umich.edu/ug-ed/college-wide/" class="dropdown-item">College-Wide Offerings</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6808 nav-item"><a title="Core Courses and Requirements" href="https://bulletin.engin.umich.edu/ug-ed/reqs/" class="dropdown-item">Core Courses and Requirements</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6886 nav-item"><a title="Degree Options" href="https://bulletin.engin.umich.edu/ug-ed/degrees/" class="dropdown-item">Degree Options</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-7020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7020 nav-item"><a title="Degree Programs" href="https://bulletin.engin.umich.edu/degree-programs/" class="dropdown-item">Degree Programs</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6810 nav-item"><a title="Combined Bachelor’s and Master’s Programs" href="https://bulletin.engin.umich.edu/ug-ed/degrees/combined/" class="dropdown-item">Combined Bachelor’s and Master’s Programs</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6811" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6811 nav-item"><a title="Engineering Minors" href="https://bulletin.engin.umich.edu/ug-ed/degrees/engineering-minors/" class="dropdown-item">Engineering Minors</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6815 nav-item"><a title="Concentrations and Supplemental Studies" href="https://bulletin.engin.umich.edu/ug-ed/degrees/concentrations-and-supplemental-studies/" class="dropdown-item">Concentrations and Supplemental Studies</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6817" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6817 nav-item"><a title="Experiential Learning" href="https://bulletin.engin.umich.edu/experiental-learning/" class="dropdown-item">Experiential Learning</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6834 nav-item"><a title="Graduation" href="https://bulletin.engin.umich.edu/ug-ed/graduation/" class="dropdown-item">Graduation</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-6835 nav-item"><a title="Graduate Education" href="https://bulletin.engin.umich.edu/courses/clasp/#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-6835">Graduate Education</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-6835">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6836 nav-item"><a title="Graduate Education" href="https://bulletin.engin.umich.edu/grad-ed/" class="dropdown-item">Graduate Education</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6837 nav-item"><a title="Degrees by Discipline" href="https://bulletin.engin.umich.edu/grad-ed/admissions/" class="dropdown-item">Degrees by Discipline</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-7984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7984 nav-item"><a title="Master of Engineering (MEng) / Doctoral of Engineering (DEng) Academic Policies" href="https://bulletin.engin.umich.edu/meng-deng-academic-policies/" class="dropdown-item">Master of Engineering (MEng) / Doctoral of Engineering (DEng) Academic Policies</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6838 nav-item"><a title="Student Resources" href="https://bulletin.engin.umich.edu/grad-ed/rackham/" class="dropdown-item">Student Resources</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6839 nav-item"><a title="Funding and Fellowships" href="https://bulletin.engin.umich.edu/grad-ed/funding/" class="dropdown-item">Funding and Fellowships</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6840 nav-item"><a title="Online Programs" href="https://bulletin.engin.umich.edu/grad-ed/online-graduate-degree-programs/" class="dropdown-item">Online Programs</a></li>
+</ul>
+</li>
+</ul></div>						</div><!-- .container -->
+			
+		</nav><!-- .site-navigation -->
+
+	</header><!-- #wrapper-navbar end -->
+
+	
+	<div class="container" id="above-content">
+	
+		    		<nav class="subnav bg-light um-maize hide">
+			<div class="menu-new-menu-container"><ul id="menu-new-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-6755"><span><a href="https://bulletin.engin.umich.edu/courses/">Course Guides</a></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6756"><span><a href="https://bulletin.engin.umich.edu/courses/aero/">Aerospace Engineering Courses (AEROSP)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6758"><span><a href="https://bulletin.engin.umich.edu/courses/appl-phys/">Applied Physics Courses (APPPHYS)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6759"><span><a href="https://bulletin.engin.umich.edu/courses/bme/">Biomedical Engineering Courses (BIOMEDE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6760"><span><a href="https://bulletin.engin.umich.edu/courses/che/">Chemical Engineering Courses (CHE + ESENG)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6761"><span><a href="https://bulletin.engin.umich.edu/courses/cee/">Civil and Environmental Engineering Courses (CEE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-201 current_page_item menu-item-6762"><span><a href="https://bulletin.engin.umich.edu/courses/clasp/" aria-current="page">Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624"><span><a href="https://bulletin.engin.umich.edu/design-science-courses-desci/">Design Science Courses (DESCI)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6764"><span><a href="https://bulletin.engin.umich.edu/courses/eecs/">Electrical Engineering and Computer Science Courses (EECS)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6765"><span><a href="https://bulletin.engin.umich.edu/courses/engr/">Engineering Division Courses (ENGR)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6766"><span><a href="https://bulletin.engin.umich.edu/courses/eer/">Engineering Education Research Courses (EER)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6767"><span><a href="https://bulletin.engin.umich.edu/courses/entr/">Entrepreneurship Courses (ENTR)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6768"><span><a href="https://bulletin.engin.umich.edu/courses/ioe/">Industrial and Operations Engineering Courses (IOE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6770"><span><a href="https://bulletin.engin.umich.edu/courses/macro-se/">Macromolecular Science and Engineering Courses (MACROMOL)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6771"><span><a href="https://bulletin.engin.umich.edu/courses/matscie/">Materials Science and Engineering Courses (MATSCIE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6772"><span><a href="https://bulletin.engin.umich.edu/courses/me/">Mechanical Engineering Courses (MECHENG, AUTO, &amp; MFG)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6773"><span><a href="https://bulletin.engin.umich.edu/courses/moep/">Military Officer Education Program (AERO, MILSCI, &amp; NAVSCI)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6780"><span><a href="https://bulletin.engin.umich.edu/courses/name/">Naval Architecture and Marine Engineering Courses (NAME)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6777"><span><a href="https://bulletin.engin.umich.edu/courses/ners/">Nuclear Engineering and Radiological Sciences Courses (NERS)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6778"><span><a href="https://bulletin.engin.umich.edu/courses/robotics-courses/">Robotics Courses (ROB)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6781"><span><a href="https://bulletin.engin.umich.edu/courses/techcomm/">Technical Communications Courses (TCHNCLCM)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6782"><span><a href="https://bulletin.engin.umich.edu/courses/uarts-courses/">UARTS Courses (UARTS)</a></span></li>
+</ul>
+</li>
+</ul></div>		</nav>
+  	
+	</div>
+
+<div class="wrapper maize" id="page-wrapper">
+	<div class="container" id="content" tabindex="-1">
+      <div class="page-title-wrapper">
+      <h1 class="entry-title  ">Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE)</h1>    </div>
+    <div class="breadcrumbs px-5 pb-4" typeof="BreadcrumbList" vocab="https://schema.org/">
+		<!-- Breadcrumb NavXT 7.4.1 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Bulletin." href="https://bulletin.engin.umich.edu/" class="home"><span property="name">Bulletin</span></a><meta property="position" content="1"></span>/<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to All Department &amp; Program Course Guides." href="https://bulletin.engin.umich.edu/courses/" class="post post-page"><span property="name">All Department &amp; Program Course Guides</span></a><meta property="position" content="2"></span>/<span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE)</span><meta property="url" content="https://bulletin.engin.umich.edu/courses/clasp/"><meta property="position" content="3"></span>	</div>
+		<div class="row">
+
+			<!-- Do the left sidebar check -->
+			
+<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
+
+    		<nav class="subnav bg-light um-maize">
+			<div class="menu-new-menu-container"><ul id="menu-new-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-6755"><span><a href="https://bulletin.engin.umich.edu/courses/">Course Guides</a></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6756"><span><a href="https://bulletin.engin.umich.edu/courses/aero/">Aerospace Engineering Courses (AEROSP)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6758"><span><a href="https://bulletin.engin.umich.edu/courses/appl-phys/">Applied Physics Courses (APPPHYS)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6759"><span><a href="https://bulletin.engin.umich.edu/courses/bme/">Biomedical Engineering Courses (BIOMEDE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6760"><span><a href="https://bulletin.engin.umich.edu/courses/che/">Chemical Engineering Courses (CHE + ESENG)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6761"><span><a href="https://bulletin.engin.umich.edu/courses/cee/">Civil and Environmental Engineering Courses (CEE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-201 current_page_item menu-item-6762"><span><a href="https://bulletin.engin.umich.edu/courses/clasp/" aria-current="page">Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624"><span><a href="https://bulletin.engin.umich.edu/design-science-courses-desci/">Design Science Courses (DESCI)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6764"><span><a href="https://bulletin.engin.umich.edu/courses/eecs/">Electrical Engineering and Computer Science Courses (EECS)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6765"><span><a href="https://bulletin.engin.umich.edu/courses/engr/">Engineering Division Courses (ENGR)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6766"><span><a href="https://bulletin.engin.umich.edu/courses/eer/">Engineering Education Research Courses (EER)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6767"><span><a href="https://bulletin.engin.umich.edu/courses/entr/">Entrepreneurship Courses (ENTR)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6768"><span><a href="https://bulletin.engin.umich.edu/courses/ioe/">Industrial and Operations Engineering Courses (IOE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6770"><span><a href="https://bulletin.engin.umich.edu/courses/macro-se/">Macromolecular Science and Engineering Courses (MACROMOL)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6771"><span><a href="https://bulletin.engin.umich.edu/courses/matscie/">Materials Science and Engineering Courses (MATSCIE)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6772"><span><a href="https://bulletin.engin.umich.edu/courses/me/">Mechanical Engineering Courses (MECHENG, AUTO, &amp; MFG)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6773"><span><a href="https://bulletin.engin.umich.edu/courses/moep/">Military Officer Education Program (AERO, MILSCI, &amp; NAVSCI)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6780"><span><a href="https://bulletin.engin.umich.edu/courses/name/">Naval Architecture and Marine Engineering Courses (NAME)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6777"><span><a href="https://bulletin.engin.umich.edu/courses/ners/">Nuclear Engineering and Radiological Sciences Courses (NERS)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6778"><span><a href="https://bulletin.engin.umich.edu/courses/robotics-courses/">Robotics Courses (ROB)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6781"><span><a href="https://bulletin.engin.umich.edu/courses/techcomm/">Technical Communications Courses (TCHNCLCM)</a></span></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6782"><span><a href="https://bulletin.engin.umich.edu/courses/uarts-courses/">UARTS Courses (UARTS)</a></span></li>
+</ul>
+</li>
+</ul></div>		</nav>
+  
+
+
+</div><!-- #left-sidebar -->
+<div class="col-md-9 content-area" id="primary">
+<!-- <div class="col-md-9 content-area" id="primary"> -->
+
+			<main class="site-main" id="main">
+
+				
+<article class="post-201 page type-page status-publish hentry" id="post-201">
+
+	<header class="entry-header">
+		<!--- Page header -->
+		
+<!-- temp hiding this -->
+		<!-- <h1 class="entry-title">Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE)</h1> -->
+
+	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+
+		<!---ACF CTA fields here -->
+		
+		
+<p><em>*For more information regarding course equivalencies please refer to the Course Equivalency section, under “<strong>How to Read a Course Description</strong>“, in the CoE Bulletin Website:&nbsp;<a href="https://bulletin.engin.umich.edu/courses/course-info/">https://bulletin.engin.umich.edu/courses/course-info/</a></em></p>
+
+
+
+<h3 class="wp-block-heading" id="100levelcourses">100 Level Courses</h3>
+
+
+
+<p><strong>SPACE 101. Rocket Science<br></strong><em>Advisory and Enforced Prerequisite: None. (3 credits)</em><br>An introduction to the science of space and space exploration. Topics covered include history of spaceflight, rockets, orbits, the space environment, satellites, remote sensing and the future human presence in space. The mathematics will be at the level of algebra and trigonometry. <a href="https://atlas.ai.umich.edu/course/SPACE%20101/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 102 (EARTH 122) (ENVIRON 102). Extreme Weather<br></strong><em>Advisory and Enforced Prerequisite: None. (3 credits)</em><br>This course provides an introduction to the physics of extreme weather events. The course uses examples of the thunderstorms, jet stream, floods, lake-effect snow storms, lightning, thunder, hail, hurricanes and tornadoes to illustrate the physical laws governing the atmosphere. Participants apply these principles in hands-on storm forecasting and weather analysis assignments. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20102/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 103 (ASTRO 183). Intro Space Weather<br></strong><em>Advisory and Enforced Prerequisite: None. (3 credits)<br></em>“Space weather” is an emerging discipline of space science that studies the conditions in space that impact society and Earth’s technological systems. Space weather is a consequence of the behavior of the sun, the nature of Earth’s magnetic field and atmosphere, and our location in the solar system. <a href="https://atlas.ai.umich.edu/course/SPACE%20103/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 105 (CHEM 105) (ENVIRON 105) (STS 105). Our Changing Atmosphere<br></strong><em>Advisory and Enforced Prerequisite: None. (3 credits)</em><br>The science of the greenhouse effect, stratospheric ozone depletion, polar ozone holes, and urban smog.<br>These phenomena and their possible consequences are discussed, along with the properties and behavior of the atmosphere and its components of the environment. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20105/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 110 (SPACE 110). Climate and Space Science and Engineering Seminar&nbsp;<br></strong><em>Advisory and Enforced Prerequisite: None. (1 credit)</em>&nbsp;<br>Seminars by noted speakers, faculty and research scientists, designed to acquaint undergraduates with contemporary science and engineering problems, technologies and broader issues in the global climate and space sciences. Technical communication assignments include written and/or oral reports based upon the seminars. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20110/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 171 (BIOLOGY 110) (EARTH 171) (ENVIRON 110) (RCNSCI 110). Introduction to Global Change:&nbsp; The Science Behind Sustainability</strong><br><em>Advisory and Enforced Prerequisite: None. (4 credits)</em><br>Students learn about the evolution of the universe, Earth, our changing environment and our planets living organisms.&nbsp; Global Change I, which is part of the GC curriculum, assumes no prior science background.&nbsp; Homework and laboratories use computer-based systems modeling and analysis, and includes a group presentation. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20171/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 172 <strong>(EARTH 172)</strong></strong> <strong>(ENVIRON 111) (GEOG 111). Climate Change and Sustainability: Environmental Challenges of the 21st Century</strong><br><em>Advisory and Enforced Prerequisite: None. (4 credits)</em><br>This course explores impacts of modern human society on land, ocean and atmosphere, considering all aspects relevant to a sustainable future. Throughout the semester, students work on a sustainability pledge to apply class material to everyday life. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20172/">CourseProfile (ATLAS)</a></p>
+
+
+
+<h3 class="wp-block-heading" id="200levelcourses">300 Level Courses</h3>
+
+
+
+<p><strong>SPACE 310. Introduction to Satellite Mission Design</strong><br><em><em>Advisory </em>Prerequisite: ENGR 100 and ENGR 101. Enforced Prerequisite: None. (3 credits)</em><br>This class teaches the fundamentals of designing a satellite mission, using projects.&nbsp; Topics that will be discussed include: (1) different subsystems; (2) formulating instrument requirements; (3) power, mass, data, and financial budgets; (5) solar power and depth of discharge; (6) thermal design; (7) orbits and launch vehicles; and (8) attitude control. <a href="https://atlas.ai.umich.edu/course/SPACE%20310/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 320 <strong>(EARTH 320)</strong></strong> <strong>(SPACE 320). Earth Systems Evolution</strong><br><em><em>Advisory </em>Prerequisite: MATH 115, MATH 116. Minimum grade of “C” for advised prerequisites. Enforced Prerequisite: None. (3 credits)</em><br>Introduction to the physics and chemistry of Earth and space. Gravitational energy, radiative energy, Earth’s energy budget and Earth tectonics are discussed along with chemical evolution and biogeochemical cycles. The connections among the carbon cycle, silicate weathering and the natural greenhouse effect are discussed. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20320/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 321 <strong>(EARTH 321)</strong></strong> <strong>(SPACE 321). Earth and Space System Dynamics</strong><br><em><em>Advisory </em>Prerequisite: CLIMATE/SPACE 320. Preceded or accompanied by MATH 215 and MATH 216. Enforced Prerequisite: None. (3 credits)</em><br>This course will describe the major wind systems and ocean currents that are important to climate studies. The primary equations will be developed and simple solutions derived that will explain many of these motions. The relations among the dynamics and other parameters in the climate system will be illustrated by examples from both paleo and present day systems. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20321/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 323 <strong>(EARTH 323)</strong></strong> <strong>(SPACE 323). Earth System Analysis</strong><br><em>Advisory and Enforced Prerequisite: None. (4 credits)</em><br>Introduction to the analysis of Earth and Atmospheric Science Systems. Topics include linear systems, harmonic analysis, sampling theory and statistical error analysis. Lectures emphasize underlying mathematical concepts. Labs emphasize application of mathematical methods to analysis of field data in a computer programming environment. Applications include turbulent air motion in the planetary boundary layer, cloud and precipitation microphysical composition, oceanic wave propagation, stratospheric ozone depletion and satellite remote sensing. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20323/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 324 (SPACE 324). Instrumentation for Atmospheric and Space Science</strong><br><em>Advisory and Enforced Prerequisite: None. (4 credits)</em><br>Introduction to fundamentals of atmospheric, space-based, and meteorological instrumentation. Includes basics of electronic sensors, optics, lasers, radar, data acquisition/management, error analysis, and data presentation. Consists of two lectures and one lab each week, and a team-based term project. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20324/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 350 <strong>(EARTH 350)</strong></strong> <strong>(SPACE 350). Atmospheric Thermodynamics</strong><br><em>Advisory Prerequisite: None. Enforced Prerequisite: MATH 216 or MATH 256 or MATH 286 or MATH 316 (No OP/F). Minimum grade requirement of “C” for enforced prerequisite. (3 credits)</em><br>Fundamentals of thermodynamics are presented, including the First, Second and Third Laws, ideal gases, adiabatic processes, phase changes, vapor pressure, humidity and atmospheric stability. The Kinetic Theory of Gases provides a molecular perspective on the various forms of atmospheric water substance and on macroscopic phenomenology in general. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20350/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 370 (EARTH 370). Solar-Terrestrial Relations</strong><br><em>Advisory Prerequisite: MATH 216 and PHYSICS 240. Enforced Prerequisite: None. (4 credits)</em><br>Introduction to solar terrestrial relations with an overview of solar radiation and its variability on all time-scales. The effects of this variability on the near-Earth space environment and upper atmosphere are considered, as well as effects on the lower and middle atmosphere with connections to weather and climate. Subjects are approached through extensive data analysis, including weekly computer lab sessions. <a href="https://atlas.ai.umich.edu/course/SPACE%20370/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 371. Introduction to Optical Remote Sensing</strong><br><em><em>Advisory </em>Prerequisite: SPACE 310 and SPACE 370. Enforced Prerequisite: CLIMATE 320/EARTH 320/SPACE 320 and CLIMATE 324/SPACE 324. Minimum grade requirement of “C-” for enforced prerequisite. (3 credits)</em><br>Introduces the principles of optical remote sensing of the Earth and planetary bodies in visible, ultraviolet<br>(UV) and infrared (IR) bands. Physical principles for visible cameras, UV and IR spectrometers; foundational principles of light, radiative transfer, scattering and geometric optics. Fundamental aspects of viewing the surface from space, such as ground track, field of view and scanning modes. Common computation tools used for remote sensing will be introduced. ‘Hands-on’ project will be emphasized in addition to theoretical concepts. <a href="https://atlas.ai.umich.edu/course/SPACE%20371/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 380 <strong>(EARTH 381)</strong></strong> <strong>(SPACE 380). Introduction to Atmospheric Radiation</strong><br><em>Advisory Prerequisite: None. Enforced Prerequisite: MATH 216 or MATH 256 or MATH 286 or MATH 316 (No OP/F). Minimum grade requirement of “C” for enforced prerequisite. (3 credits)<br></em>Basic concepts and processes of radiative transfer including radiometric quantities, electromagnetic spectrum, absorption, emission and scattering. The physics laws governing these processes including the Planck Law and the Kirchhoff Law. Radiative properties of atmospheric constituents. Reflection and refraction. Introductory-level descriptions of relevant applications in atmospheric sciences and climate physics. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20380/">CourseProfile (ATLAS)</a></p>
+
+
+
+<h3 class="wp-block-heading" id="400levelcourses">400 Level Courses</h3>
+
+
+
+<p><strong>CLIMATE 401 (EARTH 401). Geophysical Fluid Dynamics</strong><br><em><em>Advisory </em>Prerequisite: CLIMATE 323, SPACE 323 or EARTH 323 or GEOSCI 323; MATH 215 and MATH 216 and PHYSICS 240. Enforced Prerequisite: None. (3 credits)</em><br>Dynamics of the oceans and atmosphere. Equations of motion in spherical coordinates, beta-plane approximation, wave properties in the oceans and atmosphere. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20401/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 405 (SPACE 405). Special Topics<br></strong><em>Advisory and Enforced Prerequisite: None.&nbsp;(1-4 credits)</em><br>Advances in specific field of Climate and Space Sciences as revealed by recent research. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20405/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 407 (SPACE 407). Mathematical Methods in Geophysics</strong><br><em><em>Advisory </em>Prerequisite: MATH 216. Enforced Prerequisite: None. (4 credits)<br></em>Vector calculus and Cartesian tensors; Sturm-Liouville systems, Green’s Functions and solution of boundary value problems; Fourier series, Fourier and Laplace transforms, discrete Fourier transform, fast Fourier transforms, and energy spectra and singular perturbation theory. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20407/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 410 (EARTH 409). Earth System Modeling<br></strong><em><em>Advisory </em>Prerequisite: CLIMATE 320, CLIMATE 321, SPACE 320, SPACE 321. Enforced Prerequisite: None. (4 credits)</em><br>Introduction to Earth System Modeling; discussion of energy balance models, carbon cycle models and atmospheric chemistry models with multiple time scales; methods for numerical solution and practice building and analyzing results from models. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20410/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 411 (EARTH 411). Cloud and Precipitation Processes</strong><br><em><em>Advisory </em>Prerequisite: CLIMATE 350, SPACE 350, MATH 216. Enforced Prerequisite: None. (3 credits)</em><br>The special nature of water substance; nucleation of phase changes in the free atmosphere; the structure and content of clouds; the development of physical characteristics of precipitation; and the dynamics of rain systems. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20411/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 414 (EARTH 414). Weather Systems<br></strong><em><em>Advisory </em>Prerequisite: CLIMATE 350, SPACE 350, CLIMATE 401 or CLIMATE 551. Enforced Prerequisite: None. (3 credits)<br></em>Introduction to the basic characteristics, thermodynamics and dynamics of atmospheric weather systems on Earth and other planets. The students are exposed to observations of weather systems while reviewing non-dimensional analysis, dynamics and thermodynamics. Weather systems on earth are compared to that of other planets and analytical tools are used to gain insights into their basic physics. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20414/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 421. (EARTH 421) (ENVIRON 426). Introduction of Physical Oceanography</strong><br><em>Advisory Prerequisite: MATH 115 and MATH 116 and an <em>introductory science course</em></em>. <em>Enforced Prerequisite: None. (3 credits)</em><br>This course examines the fundamentals of physical oceanography; the physical properties of the ocean and water masses; circulation of the atmosphere; wind-driven and buoyancy-driven ocean circulation; tides; surface and internal waves; eddies; and mixing. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20421/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 422 (EARTH 423). Boundary Layer Meteorology<br></strong><em><em>Advisory </em>Prerequisite: CLIMATE 350, SPACE 350 or equivalent. Enforced Prerequisite: None. (4 credits)<br></em>This course explores processes in the atmospheric boundary layer, which plays an important role in the exchange of energy, mass and momentum between land and atmosphere. Topics include applications of governing atmospheric equations, atmospheric turbulence, turbulent kinetic energy, the surface energy balance and the collection and analysis of field flux tower data. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20422/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 423 (SPACE 423). Data Analysis and Visualization for Geoscientists</strong><br><em>Advisory Prerequisite: ENGR 101 and CLIMATE 323, SPACE 323</em>. <em>Enforced <em>Prerequisite: None.</em></em> <em>(4 credits)</em><br>Fundamental data science, data and error analysis, data-model comparison tests and metrics, and visualization techniques. By course end, students will be able to produce publication ready scientific data visualization, process data sets using Python, perform large data set analysis, conduct data-model comparisons, and scientifically test hypotheses and interpret results. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20423/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 431 (SPACE 431) (EECS 430). Wireless Link Design</strong><br><em>Advisory Prerequisite: None. Enforced Prerequisite: EECS 330 (No OP/F) or graduate standing. Minimum grade requirement of “C” for enforced prerequisite. (4 credits)</em><br>Fundamentals of electromagnetic propagation and radiation; radiowave propagation in different environments (near Earth, troposphere, ionosphere, indoor and urban); antenna parameters; practical antennas; link analysis; system noise; fading and multipath interference. Course includes lectures, labs and a project in which student teams develop and implement practical wireless systems. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations <a href="https://atlas.ai.umich.edu/course/CLIMATE%20431/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 440 (EARTH 454). Meteorological Analysis Laboratory</strong><br><em><em>Advisory </em>Prerequisite: CLIMATE 350, SPACE 350, CLIMATE 401. Enforced Prerequisite: None. (4 credits)</em><br>This course provides an introduction into the analysis of both surface-based and remotely-sensed meteorological data. The development and application of operational numerical forecast models will be discussed. Techniques for the prediction of both synoptic and mesoscale meteorological phenomena will also be presented. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20440/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 451 <strong>(EARTH 457)</strong>. Atmospheric Dynamics I</strong><br><em><em>Advisory </em>Prerequisite: CLIMATE 401 or MATH 450. Enforced Prerequisite: None. (4 credits)</em><br>Quasi-geostrophic energetics; fronts; the mean circulation; planetary and equatorial waves: overview of the dynamics of the middle atmosphere; wave-mean flow interaction; spectral methods; and tropical meteorology. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20451/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 455 (SPACE 455). Senior Capstone Design&nbsp;</strong><br><em><em>Advisory </em>Prerequisite: Senior Standing. Not open to graduate students. Enforced Prerequisite: None. (1-4 credits)</em><br>A CLIMATE or SPACE SCIENCE and engineering design project by which the student is exposed to the design process from concept through analysis to layout and report. Projects are proposed from the different areas of study within Climate and Space Sciences and Engineering and reflect the expertise of instructional faculty and industrial or laboratory representatives. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20455/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 463. Air Pollution Meteorology</strong><br><em>Advisory Prerequisite: MATH 215. Enforced Prerequisite: None. (3 credits)</em><br>Weather and motion systems of the atmosphere; topographic influences on winds, atmospheric stability and inversions; atmospheric diffusion; natural cleansing processes; meteorological factors in plant location, design and operation. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20463/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 466. Carbon-Climate Interaction</strong><br><em><em>Advisory </em>Prerequisite: For undergraduates: CLIMATE 320, SCIENCE 320 and CLIMATE 321, SCIENCE 321. Enforced Prerequisite: None. (3 credits)</em>&nbsp;<br>The class will focus on the exchange of carbon among reservoirs in the Earth system — atmosphere, ocean, lithosphere and biosphere — and the role of carbon dioxide, CO<sub>2</sub>, as a greenhouse gas. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20466/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 467 (CHEM 467) (EARTH 465) (ENSCEN 467) (ENVIRON 467). Biogeochemical Cycles</strong><br><em><em>Advisory </em>Prerequisite: MATH 116, CHEM 210, and PHYSICS 240, PHYSICS 260. Enforced Prerequisite: None. (3 credits)</em><br>The biogeochemical cycles of water, carbon, nitrogen and sulfur; the atmosphere and oceans as reservoirs and reaction media; the fate of natural and man-made sources of carbon, nitrogen, and sulfur compounds; the interactions among the major biogeochemical cycles and resultant global change; greenhouse gases, acid rain and ozone depletion. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20467/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 471. Space Instrumentation&nbsp;</strong><br><em><em>Advisory </em>Prerequisite: SPACE 310 or SPACE 370 or graduate standing. Enforced Prerequisite: None. (3 credits)</em><br>Fundamental principles and techniques of space physics observations and discussion of hardware and analysis techniques including in situ and remote sensing. The physical measurement principles, details of the designs of different instrumentation, and how instrument measurement output is converted to different parameters. The assumptions, limitations, and errors of different techniques to measure magnetized plasma, particle and field environments of the Earth, solar system objects and the Sun. <a href="https://atlas.ai.umich.edu/course/SPACE%20471/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 473. Climate Physics</strong><br><em><em>Advisory </em>Prerequisite: Senior or graduate standing in science or engineering. Enforced Prerequisite: None. (3 credits)</em><br>Introduction to physical mechanisms that determine climate, including relevant atmospheric, hydrologic, cryospheric, solar/orbital, volcanic and human processes. Discusses qualitative and descriptive techniques to understand how radiative, thermodynamic and dynamic processes distribute energy throughout the Earth System, drive climate feedbacks and determine the sensitivity of Earth’s climate to external perturbations. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20473/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 474 (EARTH 474). Ice Sheets, Glaciers and Climate Change<br></strong><em><em>Advisory </em>Prerequisite: MATH 115 and MATH 116. Enforced Prerequisite: None. (3 credits)<br></em>The dynamics and mass balance of ice sheets and glaciers introduced along with mathematical theories describing how ice sheets and glaciers flow and current methods of observation. The course integrates lectures, assignments and discussion of journal articles. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20474/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 475 <strong>(EARTH 475)</strong>. Earth System Interactions</strong><br><em>Advisory Prerequisite: Senior standing in science or engineering. Enforced Prerequisite: None. (4 credits)</em><br>Students will work on open-ended research problems with mathematical models from Earth System Science. The models may include, for example, surface characteristics, hydrology, solar-land-ocean-atmosphere exchanges and space-based observations. Numerical experiments will promote further understanding and interpretation of earth system interactions, team building and scientific communication. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20475/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 477. Space Weather Modeling</strong><br><em>Advisory Prerequisite: None. Enforced Prerequisite: SPACE 370. Minimum grade requirement of “C” for enforced prerequisites. (4 credits)</em><br>An introduction to a variety of models of the space environment, including models of the sun, magnetosphere, ring current, ionosphere, thermosphere and ionospheric electrodynamics. Students will learn the origins of different models, what each represents, to run the models and become familiar with the output. <a href="https://atlas.ai.umich.edu/course/SPACE%20477/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 478. Engineering for Space Environment</strong><br><em><em>Advisory </em>Prerequisite: Senior or graduate standing. Enforced Prerequisite: None. (4 credits)</em>&nbsp;<br>This course will cover the basics of the Sun and the solar wind and their influence on the space environment. In addition, atmospheric effects on spacecraft are considered. We discuss not only the physics of the drivers of space weather, but also the implications for satellite systems and their design and operation. <a href="https://atlas.ai.umich.edu/course/SPACE%20478/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 479. Atmospheric Chemistry</strong><br><em>Advisory Prerequisite: CHEM 130, MATH 216. Enforced Prerequisite: None. (4 credits)</em><br>Thermochemistry, photochemistry and chemical kinetics of the atmosphere; geochemical cycles, generation of atmospheric layers and effects of pollutants are discussed. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20479/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 480 (EAS 480). Climate Change: A Multidisciplinary Approach to Problem Solving</strong><br><em><em>Advisory </em>Prerequisite: Senior or graduate standing, MATH 116. Enforced Prerequisite: None. (3 credits)</em><br>All sectors of society are affected by climate change: science, policy, business, economics, public health, energy, ecosystems, environmental engineering, journalism, religion, etc. This course explores the intersections of these communities and exposes students the factual and contextual elements that will allow effective participation in the adaption to climate change. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20480/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 485 (SPACE 485). Principles and Applications of Remote Sensing</strong><br><em><em>Advisory </em>Prerequisite: CLIMATE 323 and CLIMATE 380. Enforced <em>Prerequisite: PHYSICS 240.</em> Minimum grade requirement of “C” for enforced prerequisite. (3 credits)</em><br>Introduction to the use of electromagnetic remote sensing to study planetary atmospheres and surfaces from space. Topics include: 1) interactions between geophysical properties and propagating electromagnetic waves; 2) design of orbiting sensors to measure them; 3) interpreting the measurements to estimate the geophysical properties. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20485/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 495. Upper Atmosphere and Ionosphere</strong><br><em>Advisory and Enforced Prerequisite: None. (4 credits)</em><br>Basic physical and chemical processes important in controlling the upper/middle atmosphere and ionosphere: photochemistry, convection, diffusion, wave activity, ionization, heating and cooling. The terrestrial, as well as planetary atmospheres and ionospheres are to be considered. <a href="https://atlas.ai.umich.edu/course/SPACE%20495/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 498 (SPACE 498). Practicum in Climate and Space Science&nbsp;<br></strong><em>Advisory and Enforced Prerequisite: None. (1-2 credits)</em><br>Course may be repeated to a maximum of 8 credit hours. Students taking this course will participate in research and/or engineering tasks. Supervision will be undertaken by faculty and engineers of the Climate &amp; Science department. Reporting requirements include a final written summary. Diverse tasks include aircraft spacecraft and rocket payload design field campaign support calibration simulation test. Students will join an active research program of Climate &amp; Science for a given semester. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20498/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 499 (SPACE 499). Directed Study</strong><br><em>Advisory and Enforced Prerequisite: None. Credit Exclusion: <em>Only 4 credits can be applied as a Technical Elective.</em></em> <em>(1-16 credits)</em>&nbsp;<br>Offers research or directed study experience for students in an area of interest to the student and faculty member. Projects are overseen and graded by faculty and may also involve mentoring by representatives from industrial, governmental and/or non-profit organizations. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20499/">CourseProfile (ATLAS)</a></p>
+
+
+
+<h3 class="wp-block-heading" id="500levelcourses">500 Level Courses</h3>
+
+
+
+<p><strong>CLIMATE 501 (SPACE 501). Seminars in Climate, Atmospheres and Space Sciences</strong><br><em>Advisory Prerequisite: None. Enforced Prerequisite: Graduate standing. (1 credit)</em><br>Current research efforts will be presented by graduate students and faculty dealing with all phases of the climate, atmospheric and space sciences. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20501/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 524. General Circulation</strong><br><em>Advisory Prerequisite: Previous or concurrent with CLIMATE 401. Enforced Prerequisite: None. (3 credits)</em><br>Processes that maintain the general circulation of the Earth’s atmosphere; the observed general circulation; energetics; balance requirements; comparison of observations with simple theories and results from general circulation model simulations. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20524/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 530. Using Climate-Change Knowledge in Planning and Design</strong><br><em>Advisory Prerequisite: Basic knowledge of climate change and its impact. Enforced Prerequisite: None. (2 credits)</em><br>This seminar focuses on special topics on the use of climate-change data and knowledge in planning, design, engineering and management. Topics include, for example, uncertainty in the context of decision making, nonstationarity in design and engineering, and vulnerability and risk assessment. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20530/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 532 (SPACE 532). Radiative Transfer</strong><br><em><em>Advisory </em>Prerequisite: PHYSICS 405. Enforced Prerequisite: None. (4 credits)</em><br>Physical processes, mathematical representation and numerical modeling of radiative transfer through atmospheres. Rayleigh and Mie scattering. &nbsp;Gaseous absorption and emission lines and line broadening. &nbsp;Numerical considerations and approximations. &nbsp;Applications include radiative energy balance and global climate, satellite remote sensing of atmospheres, and propagation through ionized media. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20532/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 545 (<strong>NERS 672</strong></strong>)<strong>. High Energy Density Physics<br></strong><em>Advisory Prerequisite: MATH 450, PHYSICS 405 and PHYSICS 40</em>6. <em>Enforced <em>Prerequisite: None. </em>(3 credits)<br></em>Fundamental tools and discoveries of high-energy density physics, where pressures are above a million atmospheres. Fundamental physical models, equations of state, hydrodynamics including shocks and instabilities, radiation transport, radiation hydrodynamics, experimental technique, inertial fusion, experimental astrophysics and relativistic systems. <a href="https://atlas.ai.umich.edu/course/SPACE%20545/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 551 (SPACE 551). Fluid Dynamics for Climate and Space Sciences<br></strong><em><em>Advisory </em>Prerequisite: MATH 215, MATH 216, and MATH 450. Enforced <em>Prerequisite: None. </em>(4 credits)<br></em>Covers the fundamentals of fluid dynamics. &nbsp;The purpose of the course is to provide fundamental grounding in fluid dynamics and in fundamental mathematical technique at the level required to do serious quantitative graduate research that involves fluid dynamics effects. &nbsp;The emphasis of the examples is on geophysical and space applications. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20551/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 565 (SPACE 565). Planetary Science</strong>&nbsp;<br><em><em>Advisory </em>Prerequisite: Graduate standing. Enforced Prerequisite: None. (4 credits)</em><br>Solar system formation; giant planets and origin of their atmospheres; biogeochemical evolution of terrestrial planet atmospheres; radiative transfer, internal energy and thermal structure; thermochemical cloud formation; radiative and charged particle energetic processes for neutrals and ions; origin of satellite atmospheres; extrasolar planets; life in the universe; planetary exploration. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20565/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 567 (CHEM 567). Chemical Dynamics</strong><br><em>Advisory Prerequisite: CHEM 461 or CLIMATE 479 or permission of instructor. Enforced Prerequisite: None. (3 credits)</em><br>A general course in chemical kinetics, useful for any branch of chemistry where reaction rates and mechanisms are important. Scope of subject matter: practical analysis of chemical reaction rates and mechanisms, theoretical concepts relating to gas and solution phase reactions. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20567/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 571. Space Plasma Measurement Techniques</strong><br><em>Advisory Prerequisite: SPACE 310 or SPACE 370. Enforced Prerequisite: None. (4 credits)</em><br>Identify, define, and practice the way to get from a science question to a set of measurements<br>necessary to answer the question. Phases are: 1) highlight the relevant scientific themes, 2) practice with<br>the simulation tools available, and 3) carry out 4 hardware experiments in the lab. <a href="https://atlas.ai.umich.edu/course/SPACE%20571/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 574 (AEROSP 574). Introduction to Space Physics<br></strong><em>Advisory and Enforced Prerequisite: None. (4 credits)<br></em>A graduate level introduction to physical and aeronomical processes in the space environment. Discussion of theoretical tools, the Sun, solar wind, heliosphere, magnetosphere, ionosphere and the upper atmosphere. Spacecraft interaction with radiation, spacecraft-plasma interactions. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20574/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 581 (AEROSP 581). Space Policy and Management<br></strong><em>Advisory Prerequisite: Graduate Standing. Enforced Prerequisite: None. (3 credits)<br></em>The first part of the course will provide detailed information on how space policy is developed in the United States and the international space community and how these policies result in specific missions. The second part will provide detailed information on modern management techniques and processes. Project managers from NASA centers and industry will lecture on the detailed management techniques and processes. <a href="https://atlas.ai.umich.edu/course/SPACE%20581/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 582 (AEROSP 582). Spacecraft Technology</strong><br><em>Advisory Prerequisite: Graduate standing. Enforced Prerequisite: None. (4 credits)</em><br>Systematic and comprehensive review of spacecraft and space mission design and key technologies for space missions. Discussions on project management and the economic and political factors that affect space missions. Specific space mission designs are developed in teams. Students of AEROSP 483/583 choose their projects based on these designs. Projects are overseen/graded by faculty and may involve mentoring by representatives from external organizations. <a href="https://atlas.ai.umich.edu/course/SPACE%20582/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 583 (AEROSP 583). Management of Space Systems Design</strong><br><em>Advisory Prerequisite: Graduate standing. Enforced Prerequisite: None. (4 credits)</em><br>Students lead teams in high level project design of a space system. Modern methods of concurrent engineering manufacturing, marketing and finance, etc., are incorporated. Projects are overseen and graded by faculty and may also involve mentoring by representatives from industrial, governmental and/or non-profit organizations. <a href="https://atlas.ai.umich.edu/course/SPACE%20583/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 584. Space Mission Design and Implementation on a High-Altitude Balloon</strong><br><em>Advisory Prerequisite: Senior or graduate standing. Enforced Prerequisite: None. (4 credits)</em><br>This class teaches students how to design, build, test and deploy a completely autonomous, sophisticated system that is designed to accomplish a specific task. The primary system is a small-satellite, deployed on a high-altitude balloon. This system involves communication, position tracking, microcontrollers, instruments and a power system. <a href="https://atlas.ai.umich.edu/course/SPACE%20584/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 585 (SPACE 585). Inverse Methods for Remote Sensing</strong><br><em><em>Advisory </em>Prerequisite: Graduate standing. Enforced Prerequisite: None. (3 credits)</em><br>Introduction to active (radar and lidar) and passive (thermal emission) visible, infrared and microwave remote sensing. Fundamentals of electromagnetic emission, absorption and scattering. Sensor performance characteristics. Mathematical methods for inversion of integral transforms and ill-conditioned systems of equations commonly encountered in remote sensing applications. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20585/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 586 (SPACE 586). Advanced Data Analysis Techniques<br></strong><em><em>Advisory </em>Prerequisite: Graduate standing. Enforced Prerequisite: None. (3 credits)<br></em>Objective methods are introduced for analyzing climate data with inherent spatial and/or temporal correlation scales. These include time series analysis, pattern recognition techniques, regression, and linear modeling. The emphases are both the usage of such methods and critical evaluation of literature that employ them. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20586/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 587 (ECE 532) (SPACE 587). Microwave Remote Sensing<br></strong><em>Advisory Prerequisite: EECS 330 and graduate standing. Enforced Prerequisite: None. (3 credits)<br></em>Theory, systems and applications of active and passive microwave remote sensing; radiative transfer; blackbody radiation; microwave radiometry; atmospheric propagation and emission radiometer receivers; surface and volume scattering and emission; radar systems; resolution techniques; calibration; synthetic aperture radar; scatterometers; applications to meteorology, oceanography and hydrology. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20587/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 588. Regional Scale Climate</strong><br><em>Advisory Prerequisite: Graduate standing. Enforced Prerequisite: None. (4 credits)</em><br>Regional scale climate processes are introduced along with the tools needed for their analysis, including downscaling techniques. The course integrates lectures, assigned journal papers and hands-on data analysis. In a course project, students will apply the analytical tools to a subject chosen by the student. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20588/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 589. The Art of Climate Modeling</strong><br><em>Advisory and Enforced Prerequisite: None (4 credits)</em><br>The course introduces the newest climate modeling techniques by surveying the design decisions in atmospheric General Circulation Models (GCMs), the trends in GCM and dynamical core modeling and how GCMs are coupled. It is built upon hands-on GCM modeling and data projects, journal paper discussions, lectures, shared cyber-infrastructure and computational tools. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20589/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 590. Space Systems Projects</strong><br><em>Advisory Prerequisite: Graduate standing. Enforced Prerequisite: None. (1-4 credits)<br></em>Space science and application mission related team project. Student teams will participate in ongoing projects in the Space Physics Research Laboratory in conjunction with industry and government sponsors. Projects are overseen and graded by faculty and may also involve mentoring by representatives from industrial, governmental and/or non-profit organizations. <a href="https://atlas.ai.umich.edu/course/SPACE%20590/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 591. Climate Practicum I<br></strong><em><em>Advisory </em>Prerequisite: Senior or graduate standing. This course is followed by CLIMATE 592. Enforced Prerequisite: None. (4 credits)<br></em>Introduction to individual and team research on real-world problems in the area of applied climate. A mentor from a commercial or governmental laboratory will pose the problem and help to guide the research. Students will learn how to apply knowledge they have already acquired. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20591/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 592. Climate Practicum II</strong><br><em>Advisory Prerequisite: Senior or graduate standing and CLIMATE 591. Enforced Prerequisite: None. (4 credits)</em><br>Introduction to individual and team research on real-world problems in the area of applied climate. On a research project started in CLIMATE 591 and guided by a mentor from a commercial or government laboratory, students will apply the principles of risk analysis and objective assessment of adaptive strategies. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20592/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 595 (ECE 518). Magnetosphere and Solar Wind</strong><br><em>Advisory Prerequisite: Graduate standing. Enforced Prerequisite: None. (3 credits)</em><br>General principles of magnetohydrodynamics; theory of the expanding atmosphere; properties of solar wind, interaction of solar wind with the magnetosphere of the Earth and other planets; bow shock and magnetotail, trapped particles, auroras. <a href="https://atlas.ai.umich.edu/course/SPACE%20595/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 596. Gaskinetic Theory</strong><br><em><em>Advisory </em>Prerequisite: Graduate standing. Enforced Prerequisite: None. (3 credits)<br></em>Maxwell-Boltzmann distribution, kinetic determination of equation of state, specific heats of gases. Dynamics of two-particle collisions. Elementary transport theory, molecular effusion, hydrodynamic transport coefficients, mean free path method. Advanced transport theory, the Boltzmann equation, collision terms, Champman-Enskog transport theory. Aerodynamics of free-molecular flow. Shock waves. <a href="https://atlas.ai.umich.edu/course/SPACE%20596/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 597 (AEROSP 597). Fundamentals of Space Plasma Physics</strong><br><em>Advisory Prerequisite: Senior level statistical PHYSICS course. Enforced Prerequisite: None. (3 credits)</em><br>Basic plasma concepts, Boltzmann equation, higher order moments equations, MHD equations, double adiabatic theory. Plasma expansion to vacuum, transonic flows, solar wind, polar wind. Collisionless shocks, propagating and planetary shocks. Fokker-Planck equation, quasilinear theory, velocity diffusion, cosmic ray transport, shock acceleration. Spacecraft charging, mass loading. <a href="https://atlas.ai.umich.edu/course/SPACE%20597/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 598. The Sun and the Heliosphere</strong><br><em>Advisory Prerequisite: SPACE 574 and PHYSICS 505 or equivalent. Enforced Prerequisite: None. (3 credits)</em><br>A complete description of the physical processes that govern the behavior of the Sun and the heliosphere with emphasis on recent theoretical and observational results. <a href="https://atlas.ai.umich.edu/course/SPACE%20598/">CourseProfile (ATLAS)</a></p>
+
+
+
+<h3 class="wp-block-heading" id="600levelcourses">600 Level Courses</h3>
+
+
+
+<p><strong>CLIMATE 605 (SPACE 605). Current Topics in Climate and Space Sciences and Engineering</strong><br><em>Advisory and Enforced Prerequisite: None. (1-4 credits)<br></em>Advances in specific fields of climate and space sciences, as revealed by recent research. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20605/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 690 (SPACE 690). Thesis/Master of Science</strong><br><em>Advisory Prerequisite: None. Enforced Prerequisite: Graduate standing. (2-6 credits)</em><br>Provides credit for research and writing of a Masters Thesis under direction of a faculty member. <a href="https://atlas.ai.umich.edu/course/SPACE%20690/">CourseProfile (ATLAS)</a></p>
+
+
+
+<h3 class="wp-block-heading" id="700levelcourses">700 Level Courses</h3>
+
+
+
+<p><strong>CLIMATE 701. Special Problems in Climate and Space Sciences&nbsp;</strong><br><em>Advisory and Enforced Prerequisite: None. (1-16 credits)</em><strong><br></strong>Supervised analysis of selected problems in various areas of climate and space sciences. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20701/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 746 (SPACE 746). CLaSP Graduate Professional Development&nbsp;<br></strong><em>Advisory and Enforced Prerequisite: None. (1 credit)<br></em>Introduction to professional skills which support graduate student success within the CLaSP Department. Topics include advisor relationships, student rights, personal finances, scientific communication, project definition and planning, attending conferences, reading journal articles, mentoring others, and code and data management. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20746/" data-type="link" data-id="https://atlas.ai.umich.edu/course/CLIMATE%20746/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 747 (SPACE 747). Proposal Development</strong><br><em>Advisory and Enforced Prerequisite: None. (1 credit)<br></em>Students will learn to write and submit a successful proposal to a US funding agency, and to deliver a<br>successful conference talk on their proposed research. The proposal topic will be chosen by the student. Proposals will be prepared for academically relevant programs. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20747/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 748 (SPACE 748). Student Presentation</strong><br><em>Advisory and Enforced Prerequisite: None. (1 credit)<br></em>Students will develop the skills to deliver a successful talk and present their research. Each<br>student will deliver two talks (one about the student research, the other is a critique of a scientific article)<br>and one AGU-like poster presentation, with extended question/answer sessions. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20748/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 749 (SPACE 749). CLaSP Seminar<br></strong><em>Advisory and Enforced Prerequisite: None. (1 credit)<br></em>Presentations from UM researchers and outside speakers about current research results, covering a broad range of topics in climate, atmosphere and space science. In this class students take turns serving as seminar chair. Questions from students will be handled before those from faculty. Conditions for credit are participation in this seminar and the completion of a short paper in which each student follows up on one talk given as part of this seminar series. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20749/">CourseProfile (ATLAS)</a></p>
+
+
+
+<h3 class="wp-block-heading" id="900levelcourses">900 Level Courses</h3>
+
+
+
+<p><strong>CLIMATE 990. Dissertation/Pre-Candidate</strong><br><em>Advisory Prerequisite: Advanced doctoral student. Enforced <em>Prerequisite: None</em></em>. <em>(1-8 credits)</em><br>Dissertation work by doctoral student not yet admitted to status as candidate. The defense of the dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20990/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 990. Dissertation/Pre-Candidate</strong><br><em>Advisory Prerequisite: None. Enforced <em>Prerequisite: Graduate standing</em></em>. <em>(1-4 credits)</em><br>Dissertation work by doctoral student not yet admitted to status as candidate. The defense of the dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment. <a href="https://atlas.ai.umich.edu/course/SPACE%20990/" data-type="link" data-id="https://atlas.ai.umich.edu/course/SPACE%20990/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>CLIMATE 995. Dissertation/Candidate</strong><br><em><em>Advisory Prerequisite: None. Enforced <em>Prerequisite: Candidate</em></em>.</em> <em>(4-8 credits)<br></em>Election for dissertation work by a doctoral student who has been admitted to candidate status. The defense of the dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment. <a href="https://atlas.ai.umich.edu/course/CLIMATE%20995/">CourseProfile (ATLAS)</a></p>
+
+
+
+<p><strong>SPACE 995. Dissertation/Candidate</strong><br><em>Advisory Prerequisite: None. Enforced <em>Prerequisite: Candidate</em></em>. <em>(4-8 credits)</em><br>Election for dissertation work by doctoral student who has been admitted to candidates status. The defense of the dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment. <a href="https://atlas.ai.umich.edu/course/SPACE%20995/">CourseProfile (ATLAS)</a></p>
+
+		<!--- Page footer -->
+		
+		
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			</main><!-- #main -->
+
+			<!-- Do the right sidebar check -->
+			
+</div><!-- #closing the primary container from /global-templates/left-sidebar-check.php -->
+
+
+		</div><!-- .row -->
+
+		<!--  -->
+
+	</div><!-- #content -->
+
+</div><!-- #page-wrapper -->
+
+
+<div class="wrapper" id="wrapper-footer">
+
+	<div class="container">
+
+		<footer class="site-footer" id="colophon">
+
+			<div class="site-info row">
+
+<!-- if ( get_field('contact_image') ) {
+		$image = get_field('contact_image');
+		//$image is an array
+		$this->photo = $image;
+	} -->
+
+      
+        
+
+				<div class="col-lg-3 col-md-auto" id="blog-info">
+
+					<p id="site-title" class="h5 section-heading">Bulletin</p>
+					<p></p>
+
+				</div><!-- #blog-info -->
+                  <div class="col-md" id="college-info">
+                    <p class="h5 section-heading">Michigan Engineering</p>
+                    <p> <i class="fa fa-map-marker" aria-hidden="true"></i> 1221 Beal Ave. Ann Arbor, MI 48109-2102</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> +1 (734) 647-7000 </p>
+                    <p><a href="mailto:engin-info@umich.edu"><i class="fa fa-envelope" aria-hidden="true"></i> Contact the College</a></p>
+                    <p><a href="https://intranet.engin.umich.edu/" target="_blank"><i class="fas fa-globe fa"></i>  Engineering Intranet</a></p>
+                  </div> <!-- #college-info -->
+        				
+
+			</div><!-- .site-info -->
+
+			<div class="row justify-content-between border-top mt-3 pt-2" id="footer-links">
+
+				<div class="col-md-auto" id="umich-info">
+					<p class="copyright">© <span class="year">2025</span>
+					<a href="http://regents.umich.edu/">The Regents of the University of Michigan </a> | <a href="http://safety.engin.umich.edu/"> Safety and Security</a> | <a href="https://teamdynamix.umich.edu/TDClient/76/Portal/KB/ArticleDet?ID=5392">Acceptable Use</a> |<a href="https://teamdynamix.umich.edu/TDClient/76/Portal/KB/ArticleDet?ID=5392">Privacy Policy </a> |<a href="https://www.umich.edu/">U-M Main</a></p>
+				</div><!--- #umich-info -->
+
+				
+
+        <div class="col-md-auto" id="login-logout">
+					<a href="https://bulletin.engin.umich.edu/wp-admin">Login</a>
+          
+      
+				</div>
+
+			</div><!-- #footer-links -->
+
+		</footer><!-- #colophon -->
+
+	</div><!-- container end -->
+
+</div><!-- wrapper end -->
+
+</div><!-- #page we need this extra closing tag here -->
+
+	<script type="text/javascript">
+		function genesisBlocksShare( url, title, w, h ){
+			var left = ( window.innerWidth / 2 )-( w / 2 );
+			var top  = ( window.innerHeight / 2 )-( h / 2 );
+			return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=600, height=600, top='+top+', left='+left);
+		}
+	</script>
+	<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/dismiss.js" id="genesis-blocks-dismiss-js-js"></script>
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/theme.min.js" id="understrap-scripts-js"></script>
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/accordion.js" id="accordion-script-js"></script>
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/subnav.js" id="subnav-js"></script>
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/wpdt.js" id="wpdt-script-js"></script>
+<script type="text/javascript" id="wdt-custom-avada-js-js-extra">
+/* <![CDATA[ */
+var wdt_ajax_object = {"ajaxurl":"https:\/\/bulletin.engin.umich.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/wdt-custom-avada-js.js" id="wdt-custom-avada-js-js"></script>
+<script type="text/javascript" src="./Climate and Space Sciences and Engineering Courses (CLIMATE &amp; SPACE) – Bulletin_files/e-202522.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"133268691\",\"post\":\"201\",\"tz\":\"-4\",\"srv\":\"bulletin.engin.umich.edu\",\"j\":\"1:14.3\"}") ]);
+_stq.push([ "clickTrackerInit", "133268691", "201" ]);
+/* ]]> */
+</script>
+
+
+
+
+
+</body></html>
