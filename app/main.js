@@ -1,100 +1,108 @@
-import Papa from "papaparse";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import * as THREE from 'three';
+import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 
-// Scene setup
+// CONSTANTS
+const SCALE_FACTOR = 10;
+
+// SCENE SETUP
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xeeeeee);
-
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
-camera.position.set(10, 10, 20); 
-camera.lookAt(8, 8, 0); 
-
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// OrbitControls
+// Camera controls
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.minDistance = 0;
+controls.maxDistance = 2000;
+camera.position.z = 100;
 
-// Load CSV
-let parsedData = null;
+// DATA LOADING
+const response = await fetch('../data/course_points.json');
+const data = await response.json();
 
-await fetch("/data/eecs_courses_umap3d.csv")
-  .then((res) => res.text())
-  .then((text) => {
-    parsedData = Papa.parse(text, { header: true });
-    console.log(parsedData);
-  });
+// COLOR MAPPING
+const uniqueSubjects = [...new Set(data.map(p => p.course_subj))].sort();
+const colorMap = {};
+uniqueSubjects.forEach((subj) => {
+    colorMap[subj] = new THREE.Color(Math.random(), Math.random(), Math.random());
+});
 
-const geometry = new THREE.SphereGeometry(0.1, 32, 32);
-const material = new THREE.MeshBasicMaterial({ color: 0x0077ff });
-const points = [];
+// POPULATE LEGEND
+const legend = document.getElementById('legend');
+uniqueSubjects.forEach((subj) => {
+    const item = document.createElement('div');
+    item.className = 'legend-item';
+    
+    const colorBox = document.createElement('span');
+    colorBox.className = 'legend-color';
+    const color = colorMap[subj];
+    colorBox.style.backgroundColor = `rgb(${Math.floor(color.r * 255)}, ${Math.floor(color.g * 255)}, ${Math.floor(color.b * 255)})`;
+    
+    const label = document.createElement('span');
+    label.className = 'legend-label';
+    label.textContent = subj;
+    
+    item.appendChild(colorBox);
+    item.appendChild(label);
+    legend.appendChild(item);
+});
 
-if (parsedData === null || parsedData.data.length === 0) {
-  console.error("No data found in the CSV file.");
-} else {
-  console.log(`Parsed ${parsedData.data.length} courses.`);
-}
+// CREATE SPHERES
+const sphereGeometry = new THREE.SphereGeometry(0.4, 16, 16);
+const spheres = [];
 
-for (let i = 0; i < parsedData.data.length; i++) {
-  const sphere = new THREE.Mesh(geometry, material);
-  sphere.position.set(
-    parseFloat(parsedData.data[i].UMAP_1),
-    parseFloat(parsedData.data[i].UMAP_2),
-    parseFloat(parsedData.data[i].UMAP_3)
-  );
-  sphere.userData = { number: `${parsedData.data[i].course_number}` };
-  scene.add(sphere);
-  points.push(sphere);
-}
+data.forEach((p, i) => {
+    const sphereMaterial = new THREE.MeshBasicMaterial({ 
+        color: colorMap[p.course_subj],
+        size: 0.5,
+        // sizeAttenuation: true,
+        transparent: true,
+        opacity: 0.9,
+        // blending: THREE.AdditiveBlending // Makes points glow
+    });
+    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    sphere.position.set(p.x * SCALE_FACTOR, p.y * SCALE_FACTOR, p.z * SCALE_FACTOR);
+    sphere.userData = { index: i };
+    scene.add(sphere);
+    spheres.push(sphere);
+});
 
-// Axes helper
-const axesHelper = new THREE.AxesHelper(50);
-scene.add(axesHelper);
-
-// Raycaster setup
+// === HOVER INTERACTION ===
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
-const tooltip = document.getElementById("tooltip");
+const label = document.getElementById('labels');
 
-function onMouseMove(event) {
-  // Convert mouse position to normalized device coordinates (-1 to +1)
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+window.addEventListener('mousemove', (event) => {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+});
 
-  raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(points);
-
-  if (intersects.length > 0) {
-    const intersected = intersects[0].object;
-    tooltip.style.display = "block";
-    tooltip.style.left = `${event.clientX + 10}px`;
-    tooltip.style.top = `${event.clientY + 10}px`;
-    tooltip.textContent = intersected.userData.number;
-  } else {
-    tooltip.style.display = "none";
-  }
-}
-
-window.addEventListener("mousemove", onMouseMove, false);
-
-// Render loop
+// --- Animation Loop ---
 function animate() {
-  requestAnimationFrame(animate);
-  controls.update();
-  renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+    controls.update();
+
+    // Raycast for hover
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(spheres);
+    if (intersects.length > 0) {
+        const idx = intersects[0].object.userData.index;
+        const course = data[idx];
+        label.innerHTML = `<strong>${course.course_subj} ${course.course_number}: ${course.course_name}</strong><br>${course.course_description}`;
+        label.style.opacity = 1;
+    } else {
+        label.innerHTML = 'Hover over a point';
+        label.style.opacity = 0.4;
+    }
+
+    renderer.render(scene, camera);
 }
 animate();
 
-// Handle window resize
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+// Handle Resize
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
 });
