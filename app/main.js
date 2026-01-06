@@ -38,7 +38,7 @@ camera.position.z = 100;
 
 // Movement controls
 const clock = new THREE.Clock();
-const moveSpeed = 50; // units per second
+const moveSpeed = 40; // units per second
 const keys = { w: false, a: false, s: false, d: false };
 
 function onKeyDown(event) {
@@ -97,28 +97,6 @@ uniqueSubjects.forEach((subj) => {
   colorMap[subj] = new THREE.Color(Math.random(), Math.random(), Math.random());
 });
 
-// POPULATE LEGEND
-const legend = document.getElementById("legend");
-uniqueSubjects.forEach((subj) => {
-  const item = document.createElement("div");
-  item.className = "legend-item";
-
-  const colorBox = document.createElement("span");
-  colorBox.className = "legend-color";
-  const color = colorMap[subj];
-  colorBox.style.backgroundColor = `rgb(${Math.floor(
-    color.r * 255
-  )}, ${Math.floor(color.g * 255)}, ${Math.floor(color.b * 255)})`;
-
-  const label = document.createElement("span");
-  label.className = "legend-label";
-  label.textContent = subj;
-
-  item.appendChild(colorBox);
-  item.appendChild(label);
-  legend.appendChild(item);
-});
-
 // CREATE SPHERES
 const sphereGeometry = new THREE.SphereGeometry(0.1, 16, 16);
 const spheres = [];
@@ -153,7 +131,6 @@ window.addEventListener("mousemove", (event) => {
 });
 
 const direction = new THREE.Vector3();
-
 // --- Animation Loop ---
 function animate() {
   requestAnimationFrame(animate);
@@ -177,14 +154,14 @@ function animate() {
   // Raycast for hover
   raycaster.setFromCamera(mouse, camera);
   const intersects = raycaster.intersectObjects(spheres);
-  if (intersects.length > 0) {
+  if (intersects.length > 0 && !controls.isLocked) {
     const idx = intersects[0].object.userData.index;
     const course = data[idx];
     label.innerHTML = `<strong>${course.course_subj} ${course.course_number}: ${course.course_name}</strong><br>${course.course_description}`;
     label.style.opacity = 1;
   } else {
-    label.innerHTML = "Hover over a point";
-    label.style.opacity = 0.4;
+    label.style.color = 'lightgrey';
+    label.style.opacity = 0.7;
   }
 
   renderer.render(scene, camera);
