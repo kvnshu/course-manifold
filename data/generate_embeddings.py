@@ -37,5 +37,6 @@ df = pd.read_csv(filename)
 df['course_number'] = df['course_number'].astype(str)
 df_embeddings = gen_embeddings(df)
 df_points = gen_pts(df_embeddings)
-df_points.to_json("course_points.json", orient="records", lines=False)
+output_path = Path("../app/course_points.json")
+df_points.to_json(output_path, orient="records", lines=False)
 
