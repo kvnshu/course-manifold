@@ -14,7 +14,7 @@ const CONFIG = {
   BLOOM: {
     STRENGTH: 1.5,
     RADIUS: 0.4,
-    THRESHOLD: 0.85
+    THRESHOLD: 0.3  // Lower threshold = more glow
   },
   EMISSIVE_INTENSITY: 2
 };
@@ -97,7 +97,11 @@ async function loadAndProcessData() {
 function generateColorMap() {
   const uniqueSubjects = [...new Set(data.map(p => p.course_subj))].sort();
   uniqueSubjects.forEach(subj => {
-    colorMap[subj] = new THREE.Color(Math.random(), Math.random(), Math.random());
+    // Generate brighter colors (0.3-1.0 range) to ensure bloom effect
+    const r = 0.3 + Math.random() * 0.7;
+    const g = 0.3 + Math.random() * 0.7;
+    const b = 0.3 + Math.random() * 0.7;
+    colorMap[subj] = new THREE.Color(r, g, b);
   });
 }
 
@@ -105,12 +109,10 @@ function createSpheres() {
   const sphereGeometry = new THREE.SphereGeometry(CONFIG.SPHERE_SIZE, 16, 16);
   
   data.forEach((p, i) => {
-    const sphereMaterial = new THREE.MeshStandardMaterial({
+    // Use MeshBasicMaterial for pure emissive glow without lighting dependency
+    const sphereMaterial = new THREE.MeshBasicMaterial({
       color: colorMap[p.course_subj],
-      emissive: colorMap[p.course_subj],
-      emissiveIntensity: CONFIG.EMISSIVE_INTENSITY,
-      roughness: 0.4,
-      metalness: 0.0,
+      // No emissive needed - the color itself will glow with bloom
     });
     
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
