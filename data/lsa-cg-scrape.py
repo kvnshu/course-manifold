@@ -5,20 +5,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
-import time
 import csv
 import json
 
 # --- Configuration ---
 # Load credentials from config file
-with open('data/lsa-cg-config.json', 'r') as f:
+with open('lsa-cg-config.json', 'r') as f:
     config = json.load(f)
     UNIQNAME = config['uniqname']
     PASSWORD = config['password']
     WINTER_TERM = config["winter_term"]
     FALL_TERM = config["fall_term"]
 
-# Initialize Driver (ensure you have the correct driver installed, e.g., chromedriver)
 driver = webdriver.Chrome()
 
 
@@ -73,56 +71,66 @@ def get_subjs():
             EC.presence_of_element_located((By.TAG_NAME, "tbody")))
         rows = tbody.find_elements(By.TAG_NAME, "tr")
         for row in rows:
-            subj_code, description = row.find_elements(By.TAG_NAME, "td")
-            description_text = description.text.strip()
-            if description_text.startswith("LSA") or description_text.startswith("ENG"):
-                subjs.add(subj_code.text.strip())
+            subj_code, _ = row.find_elements(By.TAG_NAME, "td")
+            subjs.add(subj_code.text.strip())
 
     return list(subjs)
 
 
 def get_courses_for_subj(subj_code):
-    driver.get(
-        f"https://webapps.lsa.umich.edu/cg/cg_results.aspx?termArray={WINTER_TERM}&termArray={FALL_TERM}&cgtype=ug&cgtype=gr&show=20&department={subj_code}")
-    login()
     subj_courses = []
+    seen_courses = set()
+    page_num = 1
     while True:
-        # Wait for the list of courses to load
-        WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "ClassHyperlink"))
-        )
+        base_url = f"https://webapps.lsa.umich.edu/cg/cg_results.aspx?termArray={WINTER_TERM}&cgtype=ug&cgtype=gr&show=50&department={subj_code}&iPageNum={page_num}"
+        driver.get(base_url)
+        login()
 
-        # Get the number of courses on the current page
-        course_elements = driver.find_elements(By.CLASS_NAME, "ClassHyperlink")
-        num_courses = len(course_elements)
-        print(f"Found {num_courses} courses on this page.")
+        # Wait for the list of courses to load (reduced timeout)
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located(
+                    (By.CLASS_NAME, "ClassHyperlink"))
+            )
+        except:
+            print(f"No courses found for {subj_code}")
+            break
 
-        for i in range(num_courses):
-            course_elements = driver.find_elements(
-                By.CLASS_NAME, "ClassHyperlink")
-            if i >= len(course_elements):
-                break
+        # Extract all course URLs at once (avoids stale element issues)
+        course_paths = driver.find_elements(By.CLASS_NAME, "ClassHyperlink")
+        course_paths = [elem.get_attribute('data-url')
+                        for elem in course_paths]
 
-            course_link = course_elements[i]
-            course_link.click()
+        print(
+            f"Found {len(course_paths)} courses on this page for {subj_code}.")
 
-            # Wait for the details page to load
+        # Visit each course page directly
+        for course_path in course_paths:
             try:
-                WebDriverWait(driver, 10).until(
-                    EC.presence_of_element_located(
-                        (By.ID, "contentMain_lblSubject"))
-                )
+                course_url = f"https://webapps.lsa.umich.edu/cg/{course_path}"
+                driver.get(course_url)
 
-                course_subj = driver.find_element(
-                    By.ID, "contentMain_lblSubject").text.strip()
-                course_number = driver.find_element(
-                    By.ID, "contentMain_lblCatNo").text.strip()
-                course_title = driver.find_element(
-                    By.ID, "contentMain_lblLongTitle").text.strip()
-                course_subtitle = driver.find_element(
-                    By.ID, "contentMain_lblSubtitle").text.strip()
-                description = driver.find_element(
-                    By.ID, "contentMain_lblDescr").text.strip()
+                # Extract all data with a single JavaScript call (much faster)
+                course_data = driver.execute_script("""
+                    const get = id => document.getElementById(id)?.textContent?.trim() || '';
+                    return {
+                        subj: get('contentMain_lblSubject'),
+                        number: get('contentMain_lblCatNo'),
+                        title: get('contentMain_lblLongTitle'),
+                        subtitle: get('contentMain_lblSubtitle'),
+                        description: get('contentMain_lblDescr')
+                    };
+                """)
+
+                if not course_data['subj']:
+                    continue
+
+                course_subj = course_data['subj']
+                course_number = course_data['number']
+                course_title = course_data['title']
+                course_subtitle = course_data['subtitle']
+                description = course_data['description']
+
                 if "Course Requirements:" in description:
                     description = description.split(
                         "Course Requirements:")[0].strip()
@@ -131,45 +139,34 @@ def get_courses_for_subj(subj_code):
                 if course_subtitle:
                     course_subtitle = course_subtitle.lstrip("-").strip()
                     course_name += f": {course_subtitle}"
-                print(
-                    f"Scraped: {course_subj} {course_number} - {course_name}")
 
-                course_info = (course_subj, course_number,
-                               course_name, description)
-                # Skip courses with the same code and name as the last one added.
-                if subj_courses and course_info[0] == subj_courses[-1][0] and course_info[1] == subj_courses[-1][1]:
-                    pass
-                else:
-                    subj_courses.append(course_info)
+                # Use set for faster duplicate checking
+                course_key = (course_subj, course_number, course_name)
+                if course_key not in seen_courses:
+                    seen_courses.add(course_key)
+                    subj_courses.append(
+                        (course_subj, course_number, course_name, description))
+                    print(
+                        f"Scraped: {course_subj} {course_number} - {course_name}")
+
             except Exception as e:
-                print(f"Error scraping course at index {i}: {e}")
+                print(f"Error scraping {course_path}: {e}")
+                continue
 
-            driver.back()
-
-            # Wait for the list to reload before continuing
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located(
-                    (By.CLASS_NAME, "ClassHyperlink"))
-            )
-
+        driver.get(base_url)
         try:
-            next_btn = driver.find_element(By.ID, "contentMain_hlnkNextBtm")
-            # If the button exists but is not a link (e.g. disabled), break
-            if not next_btn.get_attribute("href"):
-                break
-            next_btn.click()
-            time.sleep(2)  # Wait for page to load
+            driver.find_element(By.ID, "contentMain_hlnkNextBtm")
+            page_num += 1
         except NoSuchElementException:
-            break  # No more pages
+            print("No more pages.")
+            break
 
     return subj_courses
 
 
 def main():
-    # subjects = get_subjs()
-    # subjects = ['PHYSICS', 'MATH', 'EECS', 'AEROSP', 'CLIMATE', 'SPACE']
-    subjects = ['MCDB', 'NERS', 'TCHNCLCM', 'SCAND', 'EECS', 'CSP', 'COGSCI', 'ENGR', 'CHE', 'RCASL', 'PERSIAN', 'REEES', 'BIOPHYS', 'ANTHRBIO', 'CCS', 'AMCULT', 'COMPFOR', 'MUSMETH', 'NATIVEAM', 'SOC', 'RCSSCI', 'ROB', 'STDABRD', 'PORTUG', 'KRSTD', 'ANTHRARC', 'AMAS', 'AUTO', 'DUTCH', 'RCDRAMA', 'WRITING', 'LACS', 'ISD', 'RCSID', 'UC', 'SPACE', 'ANTHRCUL', 'WGS', 'YIDDISH', 'LING', 'RELIGION', 'GEOG', 'CSE', 'ARABIC', 'ASTRO', 'EEB', 'SPANISH', 'RCCORE', 'COMM', 'MFG', 'STS', 'CATALAN', 'PHIL', 'CMPLXSYS', 'RCSTP', 'ECE', 'ARMENIAN', 'CLIMATE', 'RCMUSIC', 'APPPHYS', 'ENGLISH', 'COMPLIT', 'MATSCIE', 'ASIANLAN', 'MECHENG', 'ELI', 'SEAS', 'MATH',
-                'MIDEAST', 'HONORS', 'GTBOOKS', 'ROMLING', 'ENSCEN', 'DIGITAL', 'ITALIAN', 'POLSCI', 'PHYSICS', 'CEE', 'HEBREW', 'MENAS', 'IOE', 'RCARTS', 'EARTH', 'RCIDIV', 'INTLSTD', 'CLCIV', 'POLISH', 'CJS', 'STATS', 'MUSEUMS', 'ECON', 'FRENCH', 'ASIANPAM', 'RCLANG', 'PPE', 'GERMAN', 'BIOLOGY', 'HISTORY', 'AAS', 'LATIN', 'LATINOAM', 'FTVM', 'HISTART', 'RCHUMS', 'MACROMOL', 'AEROSP', 'ALA', 'CZECH', 'LSWA', 'TURKISH', 'INSTHUM', 'CHEM', 'ROMLANG', 'PSYCH', 'UARTS', 'BIOMEDE', 'QMSS', 'MELANG', 'JUDAIC', 'BCS', 'NEURO', 'MEMS', 'ISLAM', 'UKR', 'SLAVIC', 'ASIAN', 'ORGSTUDY', 'ARCHAM', 'RUSSIAN', 'DATASCI', 'GREEK', 'RCCWLIT', 'GREEKMOD', 'RCNSCI', 'NAVARCH']
+    subjects = get_subjs()
+    subjects =['BIOLOGY', 'MFG', 'MCDB', 'JUDAIC', 'MUSEUMS', 'GEOG', 'ASTRO', 'MECHENG', 'RUSSIAN', 'INSTHUM', 'EDUC', 'NERS', 'IHS', 'GERMAN', 'CMPLXSYS', 'PPE', 'SM', 'UARTS', 'UKR', 'DATASCI', 'EEB', 'VOICELIT', 'NEURO', 'STDABRD', 'NAVSCI', 'COMM', 'MENAS', 'RCHUMS', 'TURKISH', 'ASIAN', 'CLIMATE', 'AEROSP', 'COMPFOR', 'RCASL', 'POLSCI', 'SPANISH', 'PHYSIOL', 'BE', 'AAS', 'NEUROSCI', 'ANTHRBIO', 'ROMLING', 'QMSS', 'HISTART', 'ISD', 'AMAS', 'BCS', 'SW', 'LACS', 'INTLSTD', 'RCCORE', 'THEORY', 'DANCE', 'RCNSCI', 'PHARMACY', 'STATS', 'COGSCI', 'INTMED', 'HUMGEN', 'ROB', 'EARTH', 'PATH', 'RCSTP', 'ARCH', 'PERSIAN', 'SCAND', 'BIOPHYS', 'GREEKMOD', 'ANATOMY', 'HEBREW', 'MICRBIOL', 'ARABIC', 'CJS', 'NAVARCH', 'BIOINF', 'PUBHLTH', 'RCMUSIC', 'MATSCIE', 'FTVM', 'MUSED', 'COMP', 'AERO', 'GREEK', 'CDB', 'MELANG', 'PORTUG', 'RCIDIV', 'STS', 'UT', 'EECS', 'ROMLANG', 'POLISH', 'APPPHYS', 'MATH', 'ENSCEN', 'SPACE', 'MIDEAST', 'ITALIAN', 'CEE', 'MOVESCI', 'MILSCI', 'PUBPOL', 'GTBOOKS', 'ARTDES', 'EPID', 'DIGITAL', 'ENGLISH', 'CCS', 'COMPLIT', 'MACROMOL', 'CSP', 'SI', 'RELIGION', 'NATIVEAM', 'EAS', 'AES', 'UC', 'LING', 'MEDCHEM', 'PHARMSCI', 'SEAS', 'ENGR', 'HONORS', 'ANTHRARC', 'BIOLCHEM', 'URP', 'MUSTHTRE', 'BIOMEDE', 'RCLANG', 'AMCULT', 'MKT', 'MEMS', 'PSYCH', 'WRITING', 'RCSSCI', 'ES', 'TO', 'LATIN', 'HISTORY', 'ECE', 'KRSTD', 'REEES', 'IOE', 'MUSPERF', 'EHS', 'RCCWLIT', 'PAT', 'FRENCH', 'BIOSTAT', 'ENS', 'DUTCH', 'ANTHRCUL', 'ISLAM', 'SOC', 'RCSID', 'MUSMETH', 'ARCHAM', 'PHRMACOL', 'YIDDISH', 'CHE', 'NURS', 'ELI', 'THTREMUS', 'CATALAN', 'PHYSICS', 'CHEM', 'LATINOAM', 'RCDRAMA', 'CLCIV', 'ECON', 'ORGSTUDY', 'WGS', 'CSE', 'MUSIC', 'AUTO', 'SLAVIC', 'RCARTS', 'JAZZ', 'ASIANLAN', 'ARMENIAN', 'ASIANPAM', 'ALA', 'LSWA', 'ARTSADMN', 'PHIL', 'MUSICOL', 'TCHNCLCM', 'ENVIRON', 'CZECH']
     print(f"Found {len(subjects)} subjects: {subjects}")
     # (course_subj, course_number, course_name, course_description)
     all_courses = []
@@ -178,7 +175,7 @@ def main():
         all_courses.extend(subj_courses)
 
     # Save courses as csv
-    filename = f"data/courses.csv"
+    filename = "courses.csv"
     with open(filename, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['course_subj', 'course_number',
