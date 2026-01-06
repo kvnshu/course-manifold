@@ -19,6 +19,17 @@ document.body.appendChild(renderer.domElement);
 
 // Camera controls
 const controls = new PointerLockControls(camera, renderer.domElement);
+const navOverlay = document.getElementById('nav-overlay');
+
+// Pointer lock event handlers
+controls.addEventListener('lock', function() {
+  navOverlay.style.display = 'none';
+});
+
+controls.addEventListener('unlock', function() {
+  navOverlay.style.display = 'block';
+});
+
 // Click anywhere to lock pointer
 document.body.addEventListener("click", () => {
   if (!controls.isLocked) controls.lock();

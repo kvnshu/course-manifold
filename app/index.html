@@ -17,6 +17,20 @@
             background: rgba(0, 0, 0, 0.5);
             border-radius: 4px;
         }
+        #nav-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            text-align: center;
+            pointer-events: none;
+            z-index: 1000;
+        }
         .legend-item {
             display: flex;
             align-items: center;
@@ -38,6 +52,7 @@
 <body>
     <div id="labels">Hover over a point</div>
     <div id="legend"></div>
+    <div id="nav-overlay">Click the screen to start navigating</div>
     <script type="importmap">
         { "imports": { "three": "./node_modules/three/build/three.module.js" } }
     </script>
