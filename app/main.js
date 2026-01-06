@@ -2,11 +2,10 @@ import * as THREE from "three";
 import { PointerLockControls } from "three/addons/controls/PointerLockControls.js";
 
 // CONSTANTS
-const SCALE_FACTOR = 5;
+const SCALE_FACTOR = 50;
 
 // SCENE SETUP
 const scene = new THREE.Scene();
-// scene.background = new THREE.Color(0xffffff);
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -34,11 +33,11 @@ controls.addEventListener('unlock', function() {
 document.body.addEventListener("click", () => {
   if (!controls.isLocked) controls.lock();
 });
-camera.position.z = 100;
+
 
 // Movement controls
 const clock = new THREE.Clock();
-const moveSpeed = 40; // units per second
+const moveSpeed = 20; // units per second
 const keys = { w: false, a: false, s: false, d: false };
 
 function onKeyDown(event) {
@@ -89,6 +88,17 @@ document.addEventListener("keyup", onKeyUp);
 // DATA LOADING
 const response = await fetch("course_points.json");
 const data = await response.json();
+
+const meanX = data.reduce((sum, p) => sum + p.x, 0) / data.length;
+const meanY = data.reduce((sum, p) => sum + p.y, 0) / data.length;
+const meanZ = data.reduce((sum, p) => sum + p.z, 0) / data.length;
+
+// Center the points around the origin
+data.forEach((p) => {
+  p.x -= meanX;
+  p.y -= meanY;
+  p.z -= meanZ;
+});
 
 // COLOR MAPPING
 const uniqueSubjects = [...new Set(data.map((p) => p.course_subj))].sort();
