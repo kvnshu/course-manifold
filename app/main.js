@@ -174,3 +174,23 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+// Modal functionality
+const modal = document.getElementById('info-modal');
+const infoIcon = document.getElementById('info-icon');
+const closeBtn = document.getElementsByClassName('close')[0];
+
+infoIcon.onclick = function(event) {
+  event.stopPropagation(); // Prevent triggering pointer lock
+  modal.style.display = 'block';
+}
+
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
