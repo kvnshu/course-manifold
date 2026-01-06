@@ -141,6 +141,8 @@ window.addEventListener("mousemove", (event) => {
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 });
 
+const direction = new THREE.Vector3();
+
 // --- Animation Loop ---
 function animate() {
   requestAnimationFrame(animate);
@@ -149,8 +151,14 @@ function animate() {
 
   // Apply movement when pointer is locked
   if (controls.isLocked) {
-    if (keys.w) controls.moveForward(moveSpeed * delta);
-    if (keys.s) controls.moveForward(-moveSpeed * delta);
+    if (keys.w){
+        camera.getWorldDirection( direction );
+        camera.position.addScaledVector( direction, moveSpeed * delta );
+    }
+    if (keys.s) {
+        camera.getWorldDirection( direction );
+        camera.position.addScaledVector( direction, -moveSpeed * delta );
+    }
     if (keys.a) controls.moveRight(-moveSpeed * delta);
     if (keys.d) controls.moveRight(moveSpeed * delta);
   }
