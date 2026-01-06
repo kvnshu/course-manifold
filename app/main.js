@@ -16,7 +16,8 @@ const CONFIG = {
     RADIUS: 0.4,
     THRESHOLD: 0.3  // Lower threshold = more glow
   },
-  EMISSIVE_INTENSITY: 2
+  EMISSIVE_INTENSITY: 2,
+  LABEL_MAX_DISTANCE: 50 // Only show labels for spheres within this distance
 };
 
 // ================================
@@ -30,6 +31,10 @@ const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 const direction = new THREE.Vector3();
 const keys = { w: false, a: false, s: false, d: false };
+
+// Label management
+let sphereLabelsContainer;
+const activeSphereLabels = new Map();
 
 // ================================
 // SCENE INITIALIZATION
@@ -216,6 +221,61 @@ function initResizeHandler() {
 }
 
 // ================================
+// SPHERE LABELING
+// ================================
+function initSphereLabels() {
+  sphereLabelsContainer = document.getElementById("sphere-labels");
+}
+
+function updateSphereLabels() {
+  // Clear existing labels
+  activeSphereLabels.clear();
+  sphereLabelsContainer.innerHTML = '';
+  
+  // Create frustum for visibility culling
+  const frustum = new THREE.Frustum();
+  const cameraMatrix = new THREE.Matrix4();
+  cameraMatrix.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse);
+  frustum.setFromProjectionMatrix(cameraMatrix);
+  
+  // Vector for screen projection and distance calculations
+  const vector = new THREE.Vector3();
+  
+  spheres.forEach((sphere, index) => {
+    // Calculate distance from camera to sphere
+    const distance = camera.position.distanceTo(sphere.position);
+    
+    // Only process spheres within the specified distance and camera frustum
+    if (distance <= CONFIG.LABEL_MAX_DISTANCE && frustum.containsPoint(sphere.position)) {
+      // Project 3D position to screen coordinates
+      vector.copy(sphere.position);
+      vector.project(camera);
+      
+      // Convert to screen pixels
+      const x = (vector.x * 0.5 + 0.5) * window.innerWidth;
+      const y = (vector.y * -0.5 + 0.5) * window.innerHeight;
+      
+      // Check if sphere is not behind camera and within reasonable distance
+      if (vector.z < 1 && vector.z > -1) {
+        const course = data[index];
+        createSphereLabel(course.course_subj, course.course_number, x, y, index);
+      }
+    }
+  });
+}
+
+function createSphereLabel(subject, number, x, y, index) {
+  const label = document.createElement('div');
+  label.className = 'sphere-label';
+  label.textContent = `${subject} ${number}`;
+  label.style.left = `${x}px`;
+  label.style.top = `${y}px`;
+  
+  sphereLabelsContainer.appendChild(label);
+  activeSphereLabels.set(index, label);
+}
+
+// ================================
 // ANIMATION & RENDERING
 // ================================
 function handleMovement(delta) {
@@ -255,6 +315,7 @@ function animate() {
   const delta = clock.getDelta();
   handleMovement(delta);
   handleHover();
+  updateSphereLabels(); // Update sphere labels each frame
   
   composer.render();
 }
@@ -273,6 +334,9 @@ async function init() {
   await loadAndProcessData();
   generateColorMap();
   createSpheres();
+  
+  // Setup UI
+  initSphereLabels();
   
   // Setup event handlers
   initKeyboardControls();
